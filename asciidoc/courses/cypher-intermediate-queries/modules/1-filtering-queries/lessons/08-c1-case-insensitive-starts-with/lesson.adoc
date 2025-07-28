@@ -1,0 +1,15 @@
+= Case Insensitive Search
+:type: challenge
+:order: 8
+:sandbox: true
+
+
+include::./questions/q1.adoc[leveloffset=+2]
+
+
+[.summary]
+== Summary
+
+In this challenge, you wrote and executed a query that will find property values, regardless of their case.
+
+In the next challenge, you will answer another question.

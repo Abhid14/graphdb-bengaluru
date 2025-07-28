@@ -1,0 +1,39 @@
+[.question]
+= 2. Query using a pattern
+
+There is a `DIRECTED` relationship between the _Person_ nodes and the _Movie_ nodes - it represents the people who directed the movies.
+
+Which `MATCH` clauses will return the names of people who directed movies? (Select all that apply)
+
+* [x] `+MATCH (m:Movie)<-[:DIRECTED]-(p:Person) RETURN p.name+`
+* [ ] `MATCH (m:Movie)--(p:Person) RETURN p.name`
+* [x] `+MATCH (m:Movie)<-[:DIRECTED]-(p) RETURN p.name+`
+* [ ] `MATCH (m:Movie)-[:DIRECTED]->(p:Person) RETURN p.name`
+
+[TIP,role=hint]
+.Hint
+====
+The _Person_ nodes represent people and the relationship must be _DIRECTED_.
+
+You don't need to define the `:Person` label for the node at the end of the pattern.
+====
+
+
+[TIP,role=solution]
+.Solution
+====
+
+The two options below are valid options for finding the people who directed movies:
+
+`MATCH (m:Movie)<-[:DIRECTED]-(p:Person) RETURN p.name` +
+`MATCH (m:Movie)<-[:DIRECTED]-(p) RETURN p.name`
+
+
+The following query, will return the directors but because the relationship type or direction type is not defined, you will receive _all_ people connected to that movie, including anyone who acted in the movie through the `:ACTED_IN` relationship.
+
+`MATCH (m:Movie {title: 'The Matrix'})--(p:Person) RETURN p.name`
+
+The following query won't return any results because the direction of the relationship is defined as `->` instead of `<-`.
+
+`MATCH (m:Movie)-[:DIRECTED]->(p:Person) RETURN p.name`
+====

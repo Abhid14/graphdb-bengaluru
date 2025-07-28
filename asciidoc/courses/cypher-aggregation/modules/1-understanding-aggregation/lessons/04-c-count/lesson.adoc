@@ -1,0 +1,13 @@
+= Counting Nodes
+:type: challenge
+:order: 4
+:sandbox: true
+
+include::./questions/q1.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you wrote and executed a query to answer a question about the graph where you counted nodes.
+
+In the next lesson, you will learn about aggregation using pattern comprehension.

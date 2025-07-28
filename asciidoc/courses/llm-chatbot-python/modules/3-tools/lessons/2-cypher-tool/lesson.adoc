@@ -1,0 +1,129 @@
+= Text to Cypher Tool
+:type: challenge
+:order: 2
+:branch: main
+
+In the previous challenge, you created a tool that used the `Neo4jVector` Store and a retriever chain to identify movies with similar plots to the user's input.
+This approach may be relatively easy to set up, but as you learned in link:/courses/genai-fundamentals/2-rag/[Retrieval Augmented Generation module of the Neo4j & GenerativeAI Fundamentals^] course, this approach can have its drawbacks.
+
+Semantic Search using Vector Similarity relies on relative proximity in vector space, which may not provide a precise match.
+
+Graph-enhanced semantic search combines the nuanced understanding of data from vector search with the contextual insights provided by graph features, leading to search results with greater depth and relevance by considering the relationships and hierarchies between entities within a broader knowledge network.
+
+In this challenge, you will create a tool that uses the structure of the graph to generate a Cypher statement to answer a question.
+
+To complete this challenge, you must:
+
+1. Create a Graph Cypher QA Chain
+2. Register the Chain as a Tool
+
+== Creating a Graph Cypher QA Chain
+
+To create a QA Chain that generates Cypher, you must import the `GraphCypherQAChain`.
+
+Open the `tools/cypher.py` file. 
+
+.tools/cypher.py
+[source,python]
+----
+include::{repository-raw}/{branch}/tools/cypher.py[tag=**]
+----
+
+The `streamlit` library, the `llm`, and `graph` objects you created are already imported.
+
+Create the Cypher QA Chain:
+
+.Creating a GraphCypherQAChain
+[source,python]
+----
+include::{repository-raw}/{branch}/solutions/tools/cypher-simple.py[tag=import]
+
+include::{repository-raw}/{branch}/solutions/tools/cypher-simple.py[tag=cypher-qa]
+----
+
+The `GraphCypherQAChain` provides a static `.from_llm()` method for creating a new instance.
+The chain will use the schema the `Neo4jGraph` class provides to write a Cypher statement and execute it against the `graph` database.
+
+include::../../../../../../shared/courses/llm/dangerous-requests.adoc[]
+
+[%collapsible]
+.View the complete code
+====
+.tools/cypher.py
+[source,python]
+----
+include::{repository-raw}/{branch}/solutions/tools/cypher-simple.py[tag=**]
+----
+====
+
+== Registering the Graph Cypher QA Chain as a Tool
+
+You can add the Graph Cypher QA Chain as a tool to your agent.
+
+Open the `agent.py` file, import the `cypher_qa` chain and register it as a tool.
+
+[source,python]
+----
+include::{repository-raw}/{branch}/solutions/agent-cypher.py[tag=import_cypher_qa]
+
+include::{repository-raw}/{branch}/solutions/agent-cypher.py[tag=tools]
+----
+
+
+[%collapsible]
+.View the complete code
+====
+.agent.py
+[source,python]
+----
+include::{repository-raw}/{branch}/solutions/agent-cypher.py[tag=**]
+----
+====
+
+== Testing the Tool
+
+You can test the new Cypher generation tool by asking the bot a question about a Movie.
+For example, you could ask "[copy]#What movies has Tom Hanks acted in??#".
+
+You can check the agent used the Cypher QA tool has in the console.
+
+[%collapsible]
+.Console Output
+====
+    > Entering new AgentExecutor chain...
+    Thought: Do I need to use a tool? Yes
+    Action: Movie information
+    Action Input: {"actor": "Tom Hanks"}
+
+    > Entering new GraphCypherQAChain chain...
+    Generated Cypher:
+    MATCH (a:Actor {name: "Tom Hanks"})-[:ACTED_IN]->(m:Movie) RETURN m.title
+    Full Context:
+    [{'m.title': 'Punchline'}, {'m.title': 'Catch Me If You Can'}, {'m.title': 'Dragnet'}, {'m.title': 'Saving Mr. Banks'}, {'m.title': 'Bachelor Party'}, {'m.title': 'Volunteers'}, {'m.title': 'Man with One Red Shoe, The'}, {'m.title': 'Splash'}, {'m.title': 'Big'}, {'m.title': 'Nothing in Common'}]
+
+    > Finished chain.
+    {'query': '{"actor": "Tom Hanks"}', 'result': "Tom Hanks has acted in the films 'Punchline', 'Catch Me If You Can', 'Dragnet', 'Saving Mr. Banks', 'Bachelor Party', 'Volunteers', 'The Man with One Red Shoe', 'Splash', 'Big', and 'Nothing in Common'."}Do I need to use a tool? No
+    Final Answer: Tom Hanks has acted in the films 'Punchline', 'Catch Me If You Can', 'Dragnet', 'Saving Mr. Banks', 'Bachelor Party', 'Volunteers', 'The Man with One Red Shoe', 'Splash', 'Big', and 'Nothing in Common'.
+
+    > Finished chain.
+====
+
+== Inconsistent Results
+
+The LLM doesn’t return consistent results - its objective is to produce an answer, not the same response. 
+The response may not be correct, generate an error due to invalid Cypher, or more data is returned than can be processed.
+
+In the following two lessons, you will learn how to provide additional context and instructions to the LLM to generate better and more consistent results.
+
+Did it work for you?
+Once you have completed the steps, click the button below to mark the lesson as completed.
+
+read::It works![]
+
+
+[.summary]
+== Summary
+
+In this lesson, you created a tool capable of generating a Cypher statement to answer a specific question and execute it against the database. But the Cypher it generates isn't perfect.
+
+In the next lesson, you will learn how to handle edge cases by fine-tuning the prompt used to generate the Cypher statement.

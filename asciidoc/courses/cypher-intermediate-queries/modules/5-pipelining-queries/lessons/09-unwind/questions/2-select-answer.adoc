@@ -1,0 +1,21 @@
+[.question]
+= 2. Using UNWIND
+
+What type of data can UNWIND be used for?
+
+* [ ] String
+* [x] List of strings
+* [ ] Map
+* [x] List of numerics
+
+[TIP,role=hint]
+.Hint
+====
+The UNWIND keyword in Cypher is used to transform a collection into a sequence of rows for further processing.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answers are **List of strings** and **List of numerics**.
+====

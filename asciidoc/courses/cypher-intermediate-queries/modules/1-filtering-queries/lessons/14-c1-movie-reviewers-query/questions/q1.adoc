@@ -1,0 +1,36 @@
+[.question.freetext]
+= Retrieving movies in a genre with their reviewers
+
+Find all the movies in the Film-Noir genre and the users who rated them.
+
+Update this query to find the `User` nodes that have a `RATED` relationship to the `Movie` nodes in the `Film-Noir` genre.
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+How many rows are returned?
+
+input::answer[]
+
+* [x] 1140
+
+[TIP,role=hint]
+.Hint
+====
+The `MATCH` clause should use the `RATED` relationship to find `User` nodes to the `Movie` nodes `m.`
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `1140`.
+
+You can run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

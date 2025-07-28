@@ -1,0 +1,26 @@
+:id: _challenge
+
+[.verify]
+= Validate Results
+
+Once you have added the `Genre` nodes, click the **Check Database** button and we will check the database for you.
+
+
+verify::[]
+
+[TIP,role=hint]
+.Hint
+====
+Your query should use the `genres` property to create `Genre` nodes and connect them to the Movie nodes using the `IN_GENRE` relationship.
+====
+
+[TIP,role=solution]
+.Solution
+====
+Run the following query to refactor your graph.
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

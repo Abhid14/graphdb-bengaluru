@@ -1,0 +1,10 @@
+= Cypher statement Processing
+:categories: cypher:6, software-development:8, data-analysis:8, advanced:5
+
+== What you will learn
+
+* Advanced Filtering
+* How DB Hits affect query performance
+* Using the `WITH` keyword to perform intermediate aggregations
+* Performing multiple queries with `UNION`
+* Using the `CALL` keyword to perform subqueries

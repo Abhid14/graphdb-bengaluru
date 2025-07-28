@@ -1,0 +1,21 @@
+[.question]
+= 2. Algorithm Execution
+
+Which of the following execution modes writes algorithm results back to the Neo4j database?
+
+* [ ] Stream
+* [ ] Stats
+* [ ] Mutate
+* [x] Write
+
+[TIP,role=hint]
+.Hint
+====
+You would use this mode to _write_ data to the database.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is **Write**.
+====

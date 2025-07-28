@@ -1,0 +1,16 @@
+= Traversing the Graph
+:type: challenge
+:order: 2
+:sandbox: true
+
+== Finding co-actors
+
+include::./questions/q1.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you determined the number of relationships that are traversed during query.
+
+In the next challenge, you will answer another question about query traversal.
+

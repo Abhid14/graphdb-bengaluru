@@ -1,0 +1,36 @@
+[.question.select-in-source]
+= Lowest rated movie
+
+Complete this query so that it returns *just* the *lowest* rated movie based on the `imdbRating` property 
+
+[source,cypher,role=nocopy noplay]
+----
+MATCH (m:Movie)
+WHERE m.imdbRating IS NOT NULL
+RETURN m.title, m.imdbRating
+/*select:ORDER BY m.imdbRating LIMIT 1*/
+----
+
+* [x] `ORDER BY m.imdbRating LIMIT 1`
+* [ ] `ORDER BY m.imdbRating DESC LIMIT 1`
+* [ ] `LIMIT 1 ORDER BY m.imdbRating`
+* [ ] `LIMIT 1 ORDER BY m.imdbRating DESC`
+
+[TIP,role=hint]
+.Hint
+====
+Ascending order is the default when using `ORDER BY`.
+
+Data limits are set at the end of a Cypher statement.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The correct Cypher statement is :
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

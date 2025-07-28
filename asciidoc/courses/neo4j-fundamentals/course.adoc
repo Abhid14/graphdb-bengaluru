@@ -1,0 +1,39 @@
+= Neo4j Fundamentals
+:categories: beginners:1, start:1, software-development:1, data-analysis:1, reporting:1, llms:1, foundation:1
+:status: active
+:next: cypher-fundamentals
+:duration: 1 hour
+:caption: Learn about Graph databases and get started with Neo4j
+:video: https://www.youtube.com/embed/Ho25rP8SSig
+:key-points: Graph theory, Graph structures, Elements of a graph database, Reading and writing data in Neo4j, Cypher patterns
+:usecase: recommendations
+
+Welcome to GraphAcademy, and the Neo4j Fundamentals course.
+
+In this course you will learn about graph databases and the underlying principles of Neo4j.
+
+You will learn about graph theory, the elements of a graph database, and when Neo4j is a good choice for your use case.
+
+You will explore a Neo4j database, learn the basics of the query language Cypher, and use Cypher to read and write data in Neo4j.
+
+This course will set you on your way to becoming a Neo4j expert.
+
+== Duration
+
+1 hour
+
+== What you will learn
+
+* Basic graph theory
+* The structure of a Neo4j graph database
+* Common graph use cases
+* How to navigate a Neo4j database
+* How to write simple Cypher queries
+
+
+[.includes]
+== This course includes
+
+* [lessons]#9 lessons#
+* [videos]#5 videos#
+* [quizes]#8 multiple choice quizzes#

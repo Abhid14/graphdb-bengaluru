@@ -1,0 +1,39 @@
+= Top Movies
+:type: challenge
+:order: 4
+:sandbox: true
+
+== Using WITH for map projection
+
+This query uses `WITH` to return a map projection of the top 10 movies by IMDb rating.
+
+[source,cypher]
+----
+include::sandbox.cypher[]
+----
+
+Modify this query to add the following properties to the map projection:
+
+- `plot`
+- `released`
+- `countries`
+
+[%collapsible]
+.Click to reveal the solution
+====
+[source,cypher]
+----
+include::solution.cypher[]
+----
+====
+
+Click Complete when you are ready to move on.
+
+read::Complete[]
+
+[.summary]
+== Summary
+
+In this challenge, you used the `WITH` clause to create a map projection.
+
+In the next challenge, you will answer another question about the graph.

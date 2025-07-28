@@ -1,0 +1,35 @@
+[.question]
+= What actors in the movie As Good as It Gets were born after 1960?
+
+Complete the `WHERE` clause in this query to filter for the movie `title` [copy]#As Good as It Gets# and for actors `born` after [copy]#1960#.
+
+[source, cypher]
+----
+include::../sandbox.cypher[]
+----
+
+Select all the actors born after 1960:
+
+* [ ] Jack Nicholson
+* [x] Helen Hunt
+* [x] Greg Kinnear
+* [x] Cuba Gooding Jr.
+
+[TIP,role=hint]
+.Hint
+====
+Add a `WHERE` clause to test that the movie `title` property is equal to [copy]#As Good as It Gets# and a person's `born` property is greater than *1960*.
+====
+
+[TIP,role=solution]
+.Solution
+====
+You can run the following query to find the answer:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+
+The actors born after 1960 are Helen Hunt, Greg Kinnear, and Cuba Gooding Jr.
+====

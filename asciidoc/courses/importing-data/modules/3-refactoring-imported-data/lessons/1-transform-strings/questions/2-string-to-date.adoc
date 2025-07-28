@@ -1,0 +1,24 @@
+[.question]
+= Viewing types in the graph
+
+What procedures can you call to view the types for properties stored in the graph?
+
+* [x] apoc.meta.nodeTypeProperties()
+* [ ] db.getNodeTypes()
+* [x] apoc.meta.relTypeProperties()
+* [ ] db.getRelTypes()
+
+[TIP,role=hint]
+.Hint
+====
+You can use these two procedures to return information about the node and relationship properties in the graph.
+====
+
+[TIP,role=solution]
+.Solution
+====
+When you convert a string to a Date value:
+
+* apoc.meta.nodeTypeProperties()
+* apoc.meta.relTypeProperties()
+====

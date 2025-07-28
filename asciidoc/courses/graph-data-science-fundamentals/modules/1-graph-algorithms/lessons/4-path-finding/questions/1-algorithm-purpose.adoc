@@ -1,0 +1,28 @@
+[.question]
+= 1. Algorithm Purpose
+
+What can path finding algorithms accomplish in GDS (select all that apply)?
+
+* [x] Find the shortest path between two nodes
+* [ ] Predict new links and paths in the graph
+* [ ] Draw paths between similarity nodes in the graph
+* [x] Find the shortest path between a single source node and a set of multiple target nodes
+* [x] Leverage breadth first or depth first search to find paths between a single source node and a set of multiple target nodes
+
+
+[TIP,role=hint]
+.Hint
+====
+Path finding algorithms in GDS can accomplish finding the shortest path between two nodes, finding the shortest path between a single source node and multiple target nodes, and utilizing breadth-first or depth-first search to find paths from a single source node.
+====
+
+[TIP,role=solution]
+.Solution
+====
+
+Path finding algorithms in GDS can accomplish the following tasks:
+
+**Find the shortest path between two nodes.** +
+**Find the shortest path between a single source node and a set of multiple target nodes.** +
+**Leverage breadth-first or depth-first search to find paths between a single source node.**
+====

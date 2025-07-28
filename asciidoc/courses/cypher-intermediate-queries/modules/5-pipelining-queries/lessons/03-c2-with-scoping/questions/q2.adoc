@@ -1,0 +1,27 @@
+[.question.freetext]
+= What is the highest revenue movie for Tom Hanks?
+
+What *movie* had the highest revenue? (Note, the answer is case-sensitive)?
+
+input::answer[]
+
+* [x] Toy Story 3
+
+[TIP,role=hint]
+.Hint
+====
+You will need to use `WITH` to pass the `theActor` and `m` variables.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `Toy Story 3`.
+
+Run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

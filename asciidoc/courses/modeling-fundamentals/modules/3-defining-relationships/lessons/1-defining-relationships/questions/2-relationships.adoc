@@ -1,0 +1,26 @@
+[.question]
+= 2. Defining relationships
+
+When you define relationships in the graph data model, what must you define?
+
+* [x] The start node label.
+* [x] The end node label.
+* [ ] The number of nodes affected.
+* [x] The relationship type (name).
+
+[TIP,role=hint]
+.Hint
+====
+A relationship must have a direction and type.
+There are three correct answers to this question.
+====
+
+[TIP,role=solution]
+.Solution
+====
+You must specify the following when you define a relationship in the graph:
+
+. The start node label.
+. The end node label.
+. The relationship type (name).
+====

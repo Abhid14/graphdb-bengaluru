@@ -1,0 +1,28 @@
+:id: _challenge
+
+[.verify]
+= Validate Results
+
+Once you have run the code to add the _Actor_ labels, click the **Check Database** button and we will check the database for you.
+
+
+verify::[]
+
+[TIP,role=hint]
+.Hint
+====
+You will need to check the existence of `Person` nodes with an `ACTED_IN` relationship.
+
+You can then set the `Actor` label to the appropriate nodes.
+====
+
+[TIP,role=solution]
+.Solution
+====
+Run this Cypher query to add the _Actor_ label to the appropriate _Person_ nodes.
+
+[source,cypher]
+-----
+include::../solution.cypher[]
+-----
+====

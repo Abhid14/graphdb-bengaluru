@@ -1,0 +1,45 @@
+[.question.freetext]
+= How many flights you have to take to get from BNA to HKT?
+
+We are interested in finding the shortest path between Nashville (BNA) and Phuket (HKT) airports. You can filter nodes using the `iata` (airport code) property.
+
+Replace the `???` in the query on the right of the screen to:
+
+. Filter `source` and `target` nodes to BNA and HKT airports using the `iata` property.
+. Update the `shortestPath` function to use a path between `source` and `target` nodes via the `HAS_ROUTE` relationship.
+
+The `length` function returns the **length of the path** (number of relationships).
+
+Enter the *length* of the shortest path between [copy]#`BNA`# and [copy]#`HKT`# airports: 
+
+input::answer[]
+
+* [x] 3
+
+
+[TIP,role=hint]
+.Hint
+====
+In the previous lesson, you reviewed this Cypher query that found the shortest path between the cities of Baltimore and Frankfurt:
+
+[source, cypher, role=noplay nocopy]
+----
+MATCH (source:Airport {city:"Baltimore"}),
+      (target:Airport {city:"Frankfurt"})
+MATCH p = shortestPath((source)-[:HAS_ROUTE*1..10]->(target)) 
+RETURN p
+----
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is *3*.
+
+You can use the following query to find the shortest route between Nashville (BNA) to Phuket (HKT):
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

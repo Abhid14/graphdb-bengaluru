@@ -1,0 +1,25 @@
+:id: _challenge
+
+[.verify]
+= Validate Results
+
+Once you have run the code to create the relationships, click the **Check Database** button and we will check the database for you.
+
+verify::[]
+
+[TIP,role=hint]
+.Hint
+====
+The database is expecting six relationships between `:Person` and `:Movie` nodes as defined in the Cypher statement above.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The following Cypher will create the `ACTED_IN` relationships between the `:Person` and `:Movie` nodes:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

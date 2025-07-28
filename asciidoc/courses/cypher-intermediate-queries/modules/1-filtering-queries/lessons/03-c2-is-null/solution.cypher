@@ -1,0 +1,3 @@
+MATCH (m:Movie)
+WHERE m.tmdbId IS NULL
+RETURN m

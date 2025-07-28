@@ -1,0 +1,30 @@
+[.question.select-in-source]
+= 1. Creating a Cypher Projection
+
+Select the correct Cypher statement to create a Cypher projection between `Customer` and `Product` nodes:
+
+[source,cypher,role=nocopy noplay]
+----
+MATCH (customer:Customer)-[:PURCHASED]->(product:Product)
+/*select:WITH gds.graph.project('proj', customer, product)
+ AS g*/
+RETURN g
+----
+
+* [ ] `WITH gds.graph.project('proj', source)`
+* [ ] `WITH gds.graph.project('proj', source, target)`
+* [x] `WITH gds.graph.project('proj', customer, product)`
+* [ ] `WITH gds.graph.project('proj', ['Customer', 'Product'])`
+
+
+[TIP,role=hint]
+.Hint
+====
+`gds.graph.project` expects the source and target nodes as defined in the `MATCH` clause.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `WITH gds.graph.project('proj', customer, product)` as the `MATCH` clause defines the `customer` and `product` nodes.
+====

@@ -1,0 +1,36 @@
+:id: _challenge
+
+[.verify]
+= Validate Results
+
+Once you have run the query, click the **Check Database** button and we will check the database for you.
+
+
+verify::[]
+
+[TIP,role=hint]
+.Hint
+====
+
+This query is missing the correct relationship types to create the relationships between the Actor, Role, and Movie nodes.
+
+[source,cypher]
+----
+MATCH (a:Actor)-[r:ACTED_IN]->(m:Movie)
+MERGE (x:Role {name: r.role})
+MERGE (a)-[:??????]->(x)
+MERGE (x)-[:??????]->(m)
+----
+====
+
+[TIP,role=solution]
+.Solution
+====
+This Cypher will create a new Role node for each `:ACTED_IN` relationship:
+
+.Create Role nodes
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

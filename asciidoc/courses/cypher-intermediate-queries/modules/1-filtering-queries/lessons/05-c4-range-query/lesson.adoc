@@ -1,0 +1,13 @@
+= Range Query
+:type: challenge
+:order: 5
+:sandbox: true
+
+include::./questions/q4.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you wrote and executed a query that tests labels and a ranges of values.
+
+In the next challenge, you will answer another question.

@@ -1,0 +1,47 @@
+= Graph Data Modeling Fundamentals
+:categories: beginners:3, start:3, software-development:3, data-analysis:3, reporting:3, llms:3, foundation:3
+:next: importing-data
+:usecase: blank-sandbox
+:graph-analytics-plugin: true
+:vector-optimized: true
+:database-provider: sandbox
+:status: active
+:duration: 2 Hours
+:caption: Learn how to design a Neo4j graph using best practices
+:video: https://www.youtube.com/embed/NrLMzcDtraE
+:key-points: Graph data modeling fundamentals, Creating graphs, Graph Refactoring
+
+== Course Description
+
+This course teaches you everything you need to know to create performant graph models in Neo4j.
+
+=== Duration
+
+2 Hours
+
+=== What you will learn
+
+Here are the modules of this course that will teach you the basics of graph data modeling for Neo4j:
+
+* What is a graph data model?
+* Modeling nodes and creating nodes for an instance model.
+* Modeling relationships and creating relationships for an instance model.
+* Testing the graph data model.
+* Why refactor a graph data model and how labels help.
+* Eliminating duplicate data in the graph.
+* Using specific relationship types.
+* Adding intermediate nodes.
+
+== Prerequisites
+
+Before taking this course, it is recommended that you complete these beginner courses in GraphAcademy:
+
+. link:/courses/neo4j-fundamentals/[Neo4j Fundamentals^]
+. link:/courses/cypher-fundamentals/[Cypher Fundamentals^]
+
+[.includes]
+== This course includes
+
+* [video]#15 video lessons#
+* [challenges]#16 short hands-on challenges#
+* [quizes]#17 simple quizzes to support your learning#

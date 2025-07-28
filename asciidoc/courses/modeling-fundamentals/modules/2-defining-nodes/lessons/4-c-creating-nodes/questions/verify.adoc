@@ -1,0 +1,27 @@
+:id: _challenge
+
+[.verify]
+= Validate Results
+
+Once you have run the query, click the **Check Database** button and we will check the database for you.
+
+verify::[]
+
+[TIP,role=hint]
+.Hint
+====
+We are expecting two new User nodes in the Sandbox.
+
+Add Sandy Jones and Clinton Spencer using `MERGE`, making sure we also add their userId values.
+====
+
+[TIP,role=solution]
+.Solution
+====
+This Cypher will create the two User nodes, with the associated properties:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

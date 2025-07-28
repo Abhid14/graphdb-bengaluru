@@ -1,0 +1,36 @@
+= Adding or Updating a Movie
+:type: challenge
+:order: 8
+:sandbox: true
+
+In this challenge, you will use `ON MATCH` and `ON CREATE` clauses to add the date and time when nodes are created and updated.
+
+Your task is to create a Cypher script which will add `createdAt` and `updatedAt` to `Movie` nodes:
+
+. The `createdAt` property should be set to the current date and time when the node is created.
+. If the node already exists, the `updatedAt` property should be set.
+
+Update this Cypher statement, replacing the `????`, to use [copy]#ON CREATE# and [copy]#ON MATCH# clauses to set the [copy]#createdAt# and [copy]#updatedAt# properties.
+
+[source, cypher]
+----
+include::sandbox.cypher[]
+----
+
+The first time you run the code, the `createdAt` property should be set. The second time, the `updatedAt` property should be set.
+
+You can check the values have been set correctly by running the following query:
+
+[source, cypher]
+----
+MATCH (m:Movie {title: 'Rocketman'})
+RETURN m.title, m.createdAt, m.updatedAt
+----
+
+include::./questions/verify.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you demonstrated how to add or update properties when a node is created or found in the graph.
+In the next lesson, you will learn how to delete nodes and relationships from the graph.

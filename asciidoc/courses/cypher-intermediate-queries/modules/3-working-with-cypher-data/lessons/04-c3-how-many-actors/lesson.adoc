@@ -1,0 +1,13 @@
+= How Many Actors?
+:type: challenge
+:order: 4
+:sandbox: true
+
+include::./questions/q3.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you used `size` to return the number of actors.
+
+In the next lesson, you will learn about working with dates and times.

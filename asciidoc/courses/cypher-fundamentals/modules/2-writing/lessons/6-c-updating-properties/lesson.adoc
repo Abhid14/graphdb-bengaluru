@@ -1,0 +1,27 @@
+= Adding Properties to a Movie
+:type: challenge
+:order: 6
+:sandbox: true
+
+In the link:../4-c-create-relationship/[Creating a Relationship^] challenge, we created a new _Movie_ node for the movie *Get Out*.  However, we forgot to add a a tagline or release year.
+
+Run this Cypher, you will see that the `tagline` and `released` properties are `null`:
+
+[source, cypher]
+----
+MATCH (m:Movie {title: 'Get Out'})
+RETURN m.title, m.tagline, m.released
+----
+
+Modify this Cypher to use the `SET` clause to add the following properties to the _Movie_ node:
+
+* [copy]#tagline#: [copy]#Gripping, scary, witty and timely!#
+* [copy]#released#: [copy]#2017#
+
+include::./questions/verify.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you demonstrated that you can add properties to a node.
+In the next lesson, you will learn how to add or update properties when a node is created or retrieved.

@@ -1,0 +1,10 @@
+= Course Summary
+:driver: Neo4j JavaScript Driver
+:dependency: neo4j-driver
+:method: driver()
+
+include::../../shared/courses/apps/summary.adoc[]
+
+== Next Steps
+
+You may be interested learning more about link:/courses/app-graphql/[Neo4j & GraphQL].

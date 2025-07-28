@@ -1,0 +1,51 @@
+[.question]
+= Profiling a query
+
+This query returns the movies that "Clint Eastwood" acted in but did *not* direct:
+
+[source,cypher]
+----
+MATCH (p:Person)-[:ACTED_IN]->(m:Movie)
+WHERE p.name = 'Clint Eastwood'
+AND NOT exists {(p)-[:DIRECTED]->(m)}
+RETURN m.title
+----
+
+You can profile the query to see the performance of the query by adding `PROFILE` to the beginning of the query.
+
+[source,cypher]
+----
+PROFILE MATCH (p:Person)-[:ACTED_IN]->(m:Movie)
+WHERE p.name = 'Clint Eastwood'
+AND NOT exists {(p)-[:DIRECTED]->(m)}
+RETURN m.title
+----
+
+The results breakdown the performance of the query into the components of the query.
+
+Review the results.
+Based on the `db hits`, which part of the query do you think is the most expensive?
+
+* [ ] (p)-[:ACTED_IN]->(m)
+* [ ] p.name = 'Clint Eastwood'
+* [x] (p)-[:DIRECTED]->(m)
+
+[TIP,role=hint]
+.Hint
+====
+Identify each part of the query using the description in the profile results.
+
+The part with the highest `dh hits` is the most expensive.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The correct answer is `(p)-[:DIRECTED]->(m)`.
+This step has the highest number of db hits.
+
+image::images/clint_db_hits.png[Profile step showing (p)-[anon_1:DIRECTED]->(m) with 364 db hits.]
+
+[NOTE]
+You may see a different number of db hits if you have made updates to the database.
+====

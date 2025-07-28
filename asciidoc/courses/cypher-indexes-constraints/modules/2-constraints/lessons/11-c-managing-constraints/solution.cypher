@@ -1,0 +1,2 @@
+DROP CONSTRAINT RATED_timestamp_exists;
+DROP CONSTRAINT Movie_released_title_unique

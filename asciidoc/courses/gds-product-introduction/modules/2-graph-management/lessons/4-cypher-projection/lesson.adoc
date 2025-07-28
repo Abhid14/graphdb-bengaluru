@@ -1,0 +1,143 @@
+= Cypher Projections
+:type: lesson
+:order: 4
+:sandbox: true
+
+// [.video]
+// video::xxxx[youtube,width=560,height=315]
+
+
+[.transcript]
+== Introduction
+
+While the native projection requires less configuration, its filtering and aggregation capabilities aren’t as flexible as Cypher. The Cypher projection, as its name implies, uses Cypher to define the projection pattern and enables more flexibility.
+
+Whether Cypher or native projection is faster, depends on your query. Its easiest to compare the two against your use-case.
+
+In this lesson, we will go over the cypher projection syntax, an applied example, where cypher projections are useful, and common strategies for transition from Cypher to native projections as workflows mature.
+
+=== Syntax
+
+To create a Cypher project you define a Cypher query and use the link:https://neo4j.com/docs/graph-data-science/current/management-ops/graph-creation/graph-project-cypher-projection/[`gds.graph.project`^] aggregation function to create the projection.
+
+[source, cypher]
+----
+MATCH (sourceNode:Node)-[r:RELATIONSHIP]->(targetNode:Node)
+WITH gds.graph.project(
+    graphName: String,
+    sourceNode: Node or Integer,
+    targetNode: Node or Integer,
+    dataConfig: Map,
+    configuration: Map
+) AS g
+RETURN g
+----
+
+A Cypher projection takes two mandatory arguments: `graphName` and `sourceNode`. For many use cases, you would also define a `targetNode`. In addition, the optional `configuration` parameter allows us to further configure graph creation.
+
+[opts="header",cols="1,1,8"]
+|===
+| Name              | Optional | Description
+| graphName         | no       | The name under which the graph is stored in the catalog.
+| sourceNode         | no       | The source node of the relationship. Must not be null.
+| targetNode | yes       | The target node of the relationship. The targetNode can be null (for example due to an OPTIONAL MATCH), in which case the source node is projected as an unconnected node.
+| dataConfig | yes       | Properties and labels configuration for the source and target nodes as well as properties and type configuration for the relationship.
+| configuration     | yes      | Additional parameters to configure the projection.
+|===
+
+=== Applied Example
+
+In the last lesson we answered which actors were most prolific based on the number of movies they acted in. Suppose instead we wanted to know which actors are the most influential in terms of the number of other actors they have been in recent, high grossing, movies with.
+
+For the sake of this example, we will call a movie “recent” if it was released on or after 1990, and high-grossing if it had revenue >= $1M.
+
+The graph is not set up to answer this question well with a direct native projection. However, we can use a cypher projection to filter to the appropriate nodes and perform an aggregation to create an `ACTED_WITH` relationship that has a `actedWithCount` property going directly between actor nodes.
+
+The Cypher query to create this data set would be:
+
+[source, cypher]
+----
+MATCH (source:Actor)-[r:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(target)
+WHERE m.year >= 1990 AND m.revenue >= 1000000
+RETURN source.name, count(r) as actedWithCount
+----
+
+The actor's name and the count of movies they acted in with other actors in recent, high-grossing movies are returned.  
+
+You can use this query to create a Cypher projection.
+
+[source, cypher]
+----
+MATCH (source:Actor)-[r:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(target)
+WHERE m.year >= 1990 AND m.revenue >= 1000000
+WITH source, target, count(r) as actedWithCount
+WITH gds.graph.project(
+    'cypher-proj',
+    source,
+    target,
+    { relationshipProperties: 
+        { 
+            actedWithCount: actedWithCount
+        }
+    }
+) AS g
+RETURN
+  g.graphName AS graph, g.nodeCount AS nodes, g.relationshipCount AS rels
+----
+
+Note how the `source` and `target` nodes are included as parameters. The `actedWithCount` property is included in the `relationshipProperties` in the `dataConfig` parameter.
+
+Once the projection is created we can apply degree centrality like we did last lesson. Except we will weight the degree centrality by `actedWithCount` property and also directly stream the top 10 results back.  This counts how many times the actor has acted with other actors in recent, high grossing movies.
+
+[source, cypher]
+----
+CALL gds.degree.stream('cypher-proj',{relationshipWeightProperty: 'actedWithCount'})
+YIELD nodeId, score
+RETURN gds.util.asNode(nodeId).name AS name, score
+ORDER BY score DESC LIMIT 10
+----
+
+The results include some big name actors as we would expect.
+
+[options="header"]
+|===========================
+| name               | score
+| Robert De Niro     | 123.0
+| Bruce Willis       | 120.0
+| Johnny Depp        | 102.0
+| Denzel Washington  | 99.0
+| Nicolas Cage       | 90.0
+| Julianne Moore     | 87.0
+| Brad Pitt          | 87.0
+| Samuel L. Jackson  | 85.0
+| George Clooney     | 84.0
+| Morgan Freeman     | 84.0
+|===========================
+
+
+=== Flexibility of Cypher Projections
+
+In the above example, there were two things that prevented us from directly using a native projection. They also happen to be two of the most common cases for using Cypher Projections.
+
+. *Complex Filtering:* Using node and/or relationship property conditions or other more complex MATCH/WHERE conditions to filter the graph, rather than just node label and relationship types.
+. *Aggregating Multi-Hop Paths with Weights:* The relationship projection required aggregating the `(Actor)-[ACTED_IN]-(Movie)-[ACTED_IN]-(Actor)` pattern to a `(Actor)-[ACTED_WITH {actedWithCount}]-(Actor)` pattern where the `actedWithCount` is a relationship weight property. This type of projection, where we need to transform multi-hop paths into an aggregated relationship that connects the source and target node, is a commonly occurring pattern in graph analytics.
+
+Further options enabled by Cypher projections include merging different node labels and relationship types and defining virtual relationships between nodes based on property conditions or other query logic.
+
+
+=== Check your understanding
+
+include::questions/1-graph-projection-using-cypher.adoc[leveloffset=+2]
+
+include::questions/2-cypher-projection-use-cases.adoc[leveloffset=+2]
+
+include::questions/3-cypher-projection-usage.adoc[leveloffset=+2]
+
+
+
+[.summary]
+== Summary
+
+In this lesson we learned about Cypher projections. What they are, how and when to use them.
+
+In the next lesson, you will be challenged to create your own Cypher projection.

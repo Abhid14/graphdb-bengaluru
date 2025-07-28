@@ -1,0 +1,103 @@
+= Creating Movie classes
+:order: 1
+:type: lesson
+
+The movie data model shows entities for movies, people, and the relationships between them. You will start your application domain with the Movie entity.
+
+== Movie domain class
+
+A Java domain class will represent the Movie entity. While you wouldn't need to map all of the fields on the `Movie` node, you will go ahead and map all of them for this example.
+
+Open the `Movie.java` class in the `src/main/java/com/example/appspringdata` directory.
+
+[%collapsible]
+.Click to reveal completed `Movie` domain class code
+====
+[source,java]
+----
+include::code/Movie.java[tag=**]
+----
+====
+
+Review the code and note the following:
+
+. The `Movie` class definition:
++ 
+[source,java]
+----
+include::code/Movie.java[tag=class]
+----
++
+The `@Node` annotation above the class definition marks the class as a node entity.
+. That `Movie` node properties are mapped to `Movie` class attributes with a relevant data type:
++
+[source,text]
+.Movie node properties and data types
+----
+{
+  budget:"INTEGER", 
+  movieId:"STRING", 
+  tmdbId:"STRING", 
+  imdbVotes:"INTEGER", 
+  runtime:"INTEGER", 
+  countries:"LIST OF STRING", 
+  imdbId:"STRING", 
+  url:"STRING", 
+  plot:"STRING", 
+  released:"STRING", 
+  languages:"LIST OF STRING", 
+  imdbRating:"FLOAT", 
+  title:"STRING", 
+  poster:"STRING", 
+  year:"INTEGER", 
+  revenue:"INTEGER"
+}
+----
++ 
+[source,java]
+.Movie class attributes
+----
+include::code/Movie.java[tag=properties]
+----
++
+The `@Id` annotation on the `movieId` field marks it as the node identifier.
++
+. The class constructor:
++
+[source,java]
+----
+include::code/Movie.java[tag=constructor]
+----
+. Getter and setters for each property:
+[source,java]
+----
+include::code/Movie.java[tag=getter]
+    ...
+----
+
+[TIP]
+The link:https://neo4j.com/docs/java-reference/current/extending-neo4j/values-and-types/[Neo4j Values and types documentation] (Table 1) shows theNeo4j data types and equivalent Java type.
+
+[TIP]
+.MovieId
+====
+For simplicity, you are using the existing `movieId` key value and only the `@Id` annotation.
+The preferred method is to use a UUIDGenerator or optimistic locking with external id values.
+====
+
+[TIP]
+.Related entity in constructor
+====
+You can include the related entity in the constructor because there isn't a bidirectional relationship defined (Movie<-Person, Person->Movie) and the data model is not cyclic (you cannot iterate over same movie and person multiple times). 
+
+Advice on how to manage bidirectional relationships is covered later in this module.
+====
+
+read::Continue[]
+
+[.summary]
+== Summary
+
+In this lesson, you created the Movie domain class.
+
+Next, you will complete a challenge to apply the skills you learned here to create the Person domain class.

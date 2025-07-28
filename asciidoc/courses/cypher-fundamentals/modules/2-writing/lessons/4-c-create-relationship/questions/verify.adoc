@@ -1,0 +1,28 @@
+:id: _challenge
+
+[.verify]
+= Validate Results
+
+Once you have run the query, click the **Check Database** button and we will check the database for you.
+
+
+verify::[]
+
+[TIP,role=hint]
+.Hint
+====
+After creating the nodes, you create the `:ACTED_IN` relationship using MERGE between the `p` and `m` nodes.
+
+The labels, properties, relationship type, and values are all case sensitive.
+====
+
+[TIP,role=solution]
+.Solution
+====
+You can run the following query in the Sandbox query to create the relationship between _Daniel Kaluuya_ and _Get Out_:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

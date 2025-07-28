@@ -1,0 +1,18 @@
+= Querying for Null Values
+:type: challenge
+:order: 3
+:sandbox: true
+
+include::./questions/q2.adoc[leveloffset=+2]
+
+[NOTE]
+--
+You can use `:history` to see your past commands and Cypher code.
+--
+
+[.summary]
+== Summary
+
+In this challenge, you wrote and executed a basic query to test for null values.
+
+In the next challenge, you will answer another question about the data in the graph.

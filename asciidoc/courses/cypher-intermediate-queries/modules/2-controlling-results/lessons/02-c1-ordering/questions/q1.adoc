@@ -1,0 +1,41 @@
+[.question.freetext]
+= Movies with ratings
+
+Find and return movie titles ordered by the the `imdbRating` value.
+
+Update this query to: 
+
+. Return only movies that have a value for the `imdbRating` property.
+. Order the results by the `imdbRating` value (highest to lowest).
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+What is the highest imdbRating value for a movie?
+
+input::answer[]
+
+* [x] 9.6
+
+[TIP,role=hint]
+.Hint
+====
+You test a property exists using the `IS NOT NULL` clause.
+
+If you order the results in *descending* order, the top result will be the highest rating.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `9.6`.
+
+You can run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

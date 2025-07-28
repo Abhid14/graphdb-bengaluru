@@ -1,0 +1,49 @@
+= Building Neo4j Applications with Go
+:status: active
+:categories: developer:2, go, software-development:11, intermediate:11, development:2
+:usecase: recommendations
+:caption: Learn how to interact with Neo4j from your Go application using the Neo4j Go Driver
+:key-points: Driver life cycle, Installing and instantiation, Read and write transactions, Best practices
+// tag::config[]
+:repository: neo4j-graphacademy/app-go
+// end::config[]
+
+
+== Course Description
+
+In this course, we walk through the steps to integrate Neo4j into your Go projects.
+
+We will follow the steps to create an instance of the Neo4j Go Driver, learn how to use sessions and transactions, and use that knowledge to replace hardcoded API responses with data from a Neo4j Sandbox instance.
+
+The project also serves a pre-built Single Page Application (SPA) that calls the API.
+As you work through the course, you will replace the hardcoded API responses with data from Neo4j.
+
+The course automatically creates a new `recommendations` sandbox within link:https://sandbox.neo4j.com/?usecase=recommendations[Neo4j Sandbox] that you will use throughout the course.
+
+
+
+=== Prerequisites
+
+By taking this course, we assume that you have a working knowledge of Go, dependency management with link:https://pkg.go.dev/[pkg.go.dev^] and wider Go ecosystem.
+We also assume that you have at least a basic knowledge of Neo4j.
+
+If you haven't already done so, we recommend that you also take the link:/courses/neo4j-fundamentals/[Neo4j Fundamentals] course in order to gain a basic understanding of Neo4j and the link:/courses/cypher-fundamentals/[Cypher Fundamentals] to understand how to query Neo4j using Cypher.
+
+=== Duration
+
+8 hours
+
+=== What you will learn
+
+* The lifecycle of the Neo4j Driver and how it relates to your application
+* How to install and instantiate the Neo4j Go Driver to your Go project
+* How read and write transactions work with Neo4j
+* Best practices on how to use Neo4j within your Go project.
+
+
+[.includes]
+== This course includes
+
+* [lessons]#4 lessons#
+* [challenges]#3 short hands-on challenges#
+* [quizes]#7 simple quizzes to support your learning#

@@ -1,0 +1,51 @@
+= Importing CSV Data into Neo4j
+:categories: cypher:99
+:status: redirect
+:redirect: /courses/importing-cypher
+:duration: 2 hours
+:caption: Learn how to import data into Neo4j
+:usecase: blank-sandbox
+:video: https://www.youtube.com/embed/vVCHJFa01gA
+:repository: neo4j-graphacademy/importing-data
+:key-points: Importing data into Neo4j, Import CSV files using the Neo4j Data Importer and Cypher, Post-processing data after import
+
+== Course Description
+
+Welcome to this Importing CSV Data into Neo4j course.
+
+In this course, you will learn how to take CSV data from another source and use it to create a graph.
+
+This course is the final step to completing your learning as a beginner to Neo4j.
+
+=== Prerequisites
+
+Before taking this course, you should have completed the following beginner graphacademy courses:
+
+. link:/courses/neo4j-fundamentals/[Neo4j Fundamentals^]
+. link:/courses/cypher-fundamentals/[Cypher Fundamentals^]
+. link:/courses/modeling-fundamentals/[Graph Data Modeling Fundamentals^]
+
+=== Duration
+
+2 hours
+
+=== What you will learn
+
+* Preparing for importing data
+* Using the Neo4j Data Importer
+* Post-processing for imported data
+* Using Cypher to import data
+
+=== What you will need
+
+You will need access to the free-to-use link:https://data-importer.neo4j.io/versions/0.7.0/?acceptTerms=true[Neo4j Data Importer^].
+
+include::./includes/importer-notice.adoc[]
+
+[.includes]
+== This course includes
+
+* [lessons]#20 lessons#
+* [videos]#11 videos#
+* [challenges]#5 short hands-on challenges#
+* [quizes]#16 quizzes#

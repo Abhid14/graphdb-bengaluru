@@ -1,0 +1,24 @@
+= Highest Revenue Movies
+:type: challenge
+:order: 3
+:sandbox: true
+
+== Using WITH to scope variables
+
+Update the `WITH` clause in this query to scope the required variables.
+
+[source,cypher]
+----
+include::sandbox.cypher[]
+----
+
+Answer this question:
+
+include::./questions/q2.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you modified a query to use a `WITH` clause to limit and order nodes.
+
+In the next challenge, you will answer another question about this query.

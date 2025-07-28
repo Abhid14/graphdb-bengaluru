@@ -1,0 +1,37 @@
+[.question]
+= Finding Jamaican Movies
+
+Find movies from "Jamaica".
+
+Update the `WHERE` clause to test if a `Movie` node has a `countries` property that includes "Jamaica".
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+Which of the following movies was produced in Jamaica?
+
+* [ ] "Before Sunrise"
+* [ ] "Blue Sky"
+* [x] "Harder They Come, The"
+* [ ] "Walk in the Clouds, A"
+
+[TIP,role=hint]
+.Hint
+====
+Use `IN` to test whether "Jamaica" is in the `countries` list property for the Movie node.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is "Harder They Come, The".
+
+You can run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

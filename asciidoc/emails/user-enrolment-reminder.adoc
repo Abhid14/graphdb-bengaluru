@@ -1,0 +1,98 @@
+= Reminder: Your {course_title} enrollment on GraphAcademy
+:has-completed: No
+// Attributes:
+// - base_url
+// - user_sub
+// - user_createdAt
+// - user_givenName
+// - user_nickname
+// - user_name
+// - user_company
+// - user_position
+// - user_id
+// - user_updatedAt
+// - course_thumbnail
+// - course_usecase
+// - course_link
+// - course_caption
+// - course_id
+// - course_title
+// - course_slug
+// - course_status
+// - course_updatedAt
+// - sandbox-sandboxId
+// - sandbox-sandboxHashKey
+// - sandbox-scheme
+// - sandbox-boltPort
+// - sandbox-host
+// - sandbox-port
+// - sandbox-ip
+// - sandbox-username
+// - sandbox-password
+// - sandbox-usecase
+// - sandbox-expires
+
+// ifdef::user_name[]
+// Hi {user_name},
+// endif::[]
+// ifndef::user_name[]
+// Hey!
+// endif::[]
+
+We noticed that you haven't returned to the link:{base_url}{course_link}[{course_title}] course on GraphAcademy for a while.
+// You can pick up the course at any time by heading to link:{base_url}{course_link}[{base_url}{course_link}^] and clicking **Continue Course**.
+
+Here are a few helpful tips to get you going on your Neo4j journey:
+
+* You can continue the course or view your active enrolments in your link:{base_url}[My Courses dashboard^].
+ifdef::course_summaryPdf[]
+* We have attached a PDF copy of the link:{base_url}{course_link}summary/[course summary^] to help you on your way.
+endif::[]
+* Feeling stuck? Reach out on the link:https://dev.neo4j.com/forum?ref=graphacademy[Neo4j Community Site], or join the link:https://dev.neo4j.com/chat[Neo4j Discord server].
+* Completing courses is one way to earn badges to showcase your public profile.  You can link:https://graphacademy.neo4j.com/u/501518f0-f287-4bd1-b65f-002d3396a92c/[check out Adam's public profile^] or link:https://graphacademy.neo4j.com/u/{user_id}/[view your own here].
+
+**Not coming back?**
+
+We'd love to hear your feedback, good or bad.
+Feel free to link:https://calendar.app.google/o3oMtRRgYqtGpg5RA[book 30 minutes with me^].
+
+{nbsp} +
+
+include::../shared/emails/recommend.adoc[]
+
+{nbsp} +
+
+// {nbsp} +
+
+// **Get Support!**
+
+// If you find yourself stuck at any stage, you can reach out for help on the https://dev.neo4j.com/forum?ref=graphacademy[Neo4j Community Site], or head over to the https://dev.neo4j.com/chat[Neo4j Discord server] for instant feedback.
+
+// {nbsp} +
+
+// **Course Feedback**
+
+// If you have any comments or questions on the course, feel free to
+// **Let us know about your Learning Experience**
+
+// We are always looking for ways to improve the learning experience for our users, and the best way to do that is with your feedback.
+
+// We'd love to hear about your experiences learning Neo4j through our website, documentation, and GraphAcademy.  We are also happy to send you some swag as a thank-you.
+
+// If you are interested in providing feedback, link:https://forms.gle/FidYYkW2fi8Ge7DX6[please complete this form^], and we will get back to you to arrange a convenient time to talk.
+
+// {nbsp} +
+
++++
+<div style="text-align:center">
++++
+link:{base_url}{course_link}[Continue Course,role="btn",style="display: inline-block;background: #006fd6;color: white; padding: 4px 12px; border-radius: 4px"]
++++
+</div>
++++
+
+{nbsp} +
+
+\-- +
+The GraphAcademy team
+

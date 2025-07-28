@@ -1,0 +1,23 @@
+[.question]
+= 1. Labels
+
+What dominant part of your use cases would you use to define node labels?
+
+* [ ] Adverbs
+* [x] Nouns
+* [ ] Adjectives
+* [ ] Verbs
+
+[TIP,role=hint]
+.Hint
+====
+Node labels are used to represent the things or entities in your use cases.
+====
+
+[TIP,role=solution]
+.Solution
+====
+**Nouns** represent the things or entities in your use cases.
+
+For example, "what *people* acted in a *movie*".
+====

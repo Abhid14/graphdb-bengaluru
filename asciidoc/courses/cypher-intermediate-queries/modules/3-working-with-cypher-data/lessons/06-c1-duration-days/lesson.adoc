@@ -1,0 +1,24 @@
+= Duration
+:type: challenge
+:order: 6
+:sandbox: true
+
+== Working with dates and times
+
+The Test node has been updated using this Cypher statement:
+
+[source,cypher]
+----
+include::reset.cypher[]
+----
+
+
+include::./questions/q1.adoc[leveloffset=+2]
+
+
+[.summary]
+== Summary
+
+In this challenge, you wrote a query to calculate the number of days between two dates.
+
+In the next challenge, you will write another query related to datetime data.

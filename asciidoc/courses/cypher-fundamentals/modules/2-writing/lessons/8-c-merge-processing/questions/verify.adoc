@@ -1,0 +1,34 @@
+:id: _challenge
+
+[.verify]
+= Validate Results
+
+Once you have run the MERGE statement twice, click the **Check Database** button and we will check the database for you.
+
+
+verify::[]
+
+[TIP,role=hint]
+.Hint
+====
+You must use `ON CREATE SET` to set createdAt.
+You must use `ON MATCH SET` to set updatedAt.
+====
+
+
+[TIP,role=solution]
+.Solution
+====
+The following query uses a `MERGE` clause to find or create a `:Movie` node with the title _Rocketman_.
+
+When initially created, the `createdAt` property will be set but the `updatedAt` property will be null.
+
+If the node already exists, the `createdAt` property will not be set, but a `updatedAt` property will be set.
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+
+You will need to run this query twice to see the `createdAt and `updatedAt` properties.
+====

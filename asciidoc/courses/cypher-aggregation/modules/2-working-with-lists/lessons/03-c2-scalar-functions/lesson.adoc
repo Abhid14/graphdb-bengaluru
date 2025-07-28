@@ -1,0 +1,13 @@
+= Total imdbVotes for Tom Hanks
+:type: challenge
+:order: 3
+:sandbox: true
+
+include::./questions/q1.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you wrote a query that uses `reduce()`  to return the total of imdbVotes for movies that Tom Hanks acted in.
+
+In the next lesson, you will learn about Cypher functions that return lists.

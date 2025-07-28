@@ -1,0 +1,4 @@
+= Go
+:caption: Learn how to build applications with Neo4j & GoLang
+:shortname: Golang
+:link: /categories/development/

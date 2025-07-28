@@ -1,0 +1,48 @@
+[.question]
+= Check movie titles
+
+Find all the Movies where the title begins with "Life is".
+
+You should ensure that the query is case-insensitive. e.g. also retrieve movies with titles such as "LIFE IS", "life is", "Life Is".
+
+Update the `WHERE` clause to test if a `Movie` node has a `title` property that starts with "Life is".
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+Select all the correct movies titles:
+
+* [x] "Life Is Beautiful (La Vita è bella)"
+* [x] "Life Is Sweet"
+* [ ] "LIFE IS LOUD"
+* [x] "Life is a Miracle (Zivot je cudo)"
+* [x] "Life Is Sacred"
+* [ ] "Life is a Long Quiet River"
+
+[TIP,role=hint]
+.Hint
+====
+You can use toLower() or toUpper() to test against "life is".
+
+The clause `STARTS WITH` can be used to test if a string starts with a specific value.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The correct answers are:
+
+* "Life Is Beautiful (La Vita è bella)"
+* "Life Is Sweet"
+* "Life is a Miracle (Zivot je cudo)"
+* "Life Is Sacred"
+
+You can run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

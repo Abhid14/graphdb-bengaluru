@@ -1,0 +1,28 @@
+= Project Introduction
+:order: 0
+
+As part of this course, you will work on a link:https://github.com/{repository}[pre-built repository^] for the fictional client **Neoflix**.
+The course is designed to be framework agnostic, so although we have chosen a specific framework, the tasks that you will perform will be the same regardless of your choice of framework.
+
+In the early stages you will learn some of the theory required and then use that knowledge to implement a set of features in the API.
+
+
+== Repository Information
+
+We have built a repository that takes care of the boiler plate, so you can focus on implementing the functionality.
+
+
+* The project is designed to work with Python version **3.10**
+* Packages can be installed with pip
+* A web server has been built with link:https://flask.palletsprojects.com/en/2.0.x/[Flask^]
+** Authentication is handled with link:https://jwt.io/[JWT Tokens^] and link:https://flask-jwt-extended.readthedocs.io/en/stable/[Flask-JWT-Extended^]
+** Passwords are encrypted and verified with link:https://github.com/pyca/bcrypt/[bcrypt^]
+** Testing is performed using link:https://pytest.org/[pytest^]
+
+
+== Get Started
+
+In the next lesson, we will explore the project and introduce you to Neo4j Sandbox.
+
+
+link:./1-setup/[Setup the Repository →, role=btn]

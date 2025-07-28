@@ -1,0 +1,28 @@
+= UK Movies
+:type: challenge
+:order: 10
+:sandbox: true
+
+== Using UNWIND pass on intermediate results
+
+This query uses `UNWIND` to find the number of movies containing each language.
+
+[source,cypher]
+----
+include::sandbox.cypher[]
+----
+
+Modify this query to return the number of movies produced in each country.
+
+The `country` property on `Movie` nodes is a list of countries where the movie was produced.
+
+Then answer this question:
+
+include::./questions/q1.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you modified a query that uses `UNWIND`.
+
+In the next challenge, you will answer another question from the query.

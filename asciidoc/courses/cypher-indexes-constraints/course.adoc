@@ -1,0 +1,40 @@
+= Cypher Indexes and Constraints
+:categories: cypher:4, start:7, intermediate:4, processing:2
+:usecase: recommendations
+:caption: Make your graph more performant with Cypher constraints and indexes
+:status: active
+:duration: 2-3 hours
+:video: https://www.youtube.com/embed/AN85qLLsNT4
+:key-points: Constraints, Indexes, Full-text indexes and search, Index Management
+
+//https://youtu.be/AN85qLLsNT4
+// delete old video: https://youtu.be/nzQpgMUj2DE
+
+== Course description
+
+
+Build on from the knowledge gained in the link:/courses/cypher-intermediate-queries/[Cypher Intermediate Queries] course by learning how to create and manage indexes and constraints to make your database more performant.
+
+This course uses the Recommendations dataset which contains Person, Movie, Genre, and User nodes.
+
+=== Prerequisites
+
+To take this course we recommend that you have taken these courses in GraphAcademy:
+
+. link:/courses/neo4j-fundamentals/[Neo4j Fundamentals^]
+. link:/courses/cypher-fundamentals/[Cypher Fundamentals^]
+. link:/courses/modeling-fundamentals/[Graph Data Modeling Fundamentals^]
+. link:/courses/cypher-intermediate-queries/[Cypher Intermediate Queries^]
+
+=== Duration
+
+2-3 hours
+
+[.learn]
+=== What you will learn
+
+* How Neo4j uses indexes and constraints to improve query  and load performance.
+* How to create and use constraints in Neo4j.
+* How to create and use indexes in Neo4j.
+* How to create and use full-text indexes in Neo4j.
+* How to control and better understand the use of indexes in Neo4j.

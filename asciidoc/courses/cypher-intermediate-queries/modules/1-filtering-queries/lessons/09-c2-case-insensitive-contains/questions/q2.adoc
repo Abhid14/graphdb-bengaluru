@@ -1,0 +1,38 @@
+[.question.freetext]
+=  Roles containing dog?
+
+Find the roles that contain the word "dog" (case-insensitive). 
+
+Update the query to filter by the `role` property of the `ACTED_IN` relationship.
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+How many rows are returned?
+
+input::answer[]
+
+* [x] 24
+
+[TIP,role=hint]
+.Hint
+====
+You should use toLower() or toUpper() to test the string.
+
+The clause `CONTAINS` can be used to test if a string contains a specific value.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `24`
+
+You can run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

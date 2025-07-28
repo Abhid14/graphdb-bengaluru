@@ -1,0 +1,36 @@
+[.question.freetext]
+=  Rob Reiner directed
+
+Find the movies that "Rob Reiner" directed, but did *not* act in.
+
+Update the query to test for the existence of a pattern where "Rob Reiner" acted in a movie.
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+How many rows are returned?
+
+input::answer[]
+
+* [x] 14
+
+[TIP,role=hint]
+.Hint
+====
+Use `NOT exists {<pattern>}`. The pattern should use the `p` and `m` nodes.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `14`
+
+You can run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

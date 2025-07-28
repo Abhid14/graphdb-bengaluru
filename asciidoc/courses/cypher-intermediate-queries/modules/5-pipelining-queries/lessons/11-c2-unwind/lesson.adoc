@@ -1,0 +1,24 @@
+= Switzerland Movies
+:type: challenge
+:order: 11
+:sandbox: true
+
+== Using UNWIND pass on intermediate results
+
+Add a `WHERE` clause to this query to filter the movies produced in Switzerland.
+
+[source,cypher]
+----
+include::sandbox.cypher[]
+----
+
+Then answer this question:
+
+include::./questions/q2.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you answered another question about the graph.
+
+In the next module, you will learn about subqueries in Cypher.

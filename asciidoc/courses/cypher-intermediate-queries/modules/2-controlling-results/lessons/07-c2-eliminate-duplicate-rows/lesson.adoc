@@ -1,0 +1,15 @@
+= Eliminating Duplicates
+:type: challenge
+:order: 7
+:sandbox: true
+
+== Eliminating duplicate names
+
+include::./questions/q2.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you modified  a query to eliminate duplicate results.
+
+In the next lesson, you will learn about changing results returned.

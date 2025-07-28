@@ -1,0 +1,42 @@
+:id: _challenge
+
+[.verify]
+= Validate Results
+
+Once you completed the steps of this Challenge, click the **Check Database** button and we will check the database for you.
+
+
+verify::[]
+
+[TIP,role=hint]
+.Hint
+====
+. Find all Person nodes that have a _:DIRECTED_ relationship.
+. Use `SET` to set the label to DIRECTED
+====
+
+[TIP,role=solution]
+.Solution
+====
+Here is the code to set the Director label:
+
+[source,cypher]
+----
+include::{repository-raw}/{path}/solution.cypher[]
+----
+
+If your graph does not verify, you may need to:
+
+. Clear the graph with:
+
+[source,cypher]
+----
+include::{repository-raw}/main/shared/detach-delete-all-nodes.cypher[]
+----
+
+[start=2]
+. Re-import the data once again with the Data Importer
+. Transform the genres, countries, languages properties to lists
+. Add the Director labels
+
+====

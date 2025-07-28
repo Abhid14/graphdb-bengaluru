@@ -1,0 +1,16 @@
+= Challenge: Find the Shortest Path
+:type: challenge
+:order: 5
+:sandbox: true
+
+Now for a challenge.
+
+
+include::./questions/verify.adoc[leveloffset=+2]
+
+
+[.summary]
+== Summary
+In this lesson you applied the knowledge from the last lesson to find the shortest path between two actors using a graph projection.
+
+In the next lesson, you will learn more about Community Detection Algorithms.

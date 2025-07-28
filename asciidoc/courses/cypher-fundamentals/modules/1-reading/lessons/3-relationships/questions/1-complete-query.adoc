@@ -1,0 +1,39 @@
+[.question.select-in-source]
+= 1. Specifying the relationship direction
+
+Complete the following Cypher query that starts with the _Movie_ node.
+
+Use the dropdown below to select the correct relationship direction.
+
+[source,cypher,role=nocopy noplay]
+----
+MATCH (m:Movie)/*select:<-[:ACTED_IN]-*/(p:Person)
+RETURN m.title, p.name
+----
+
+
+* [ ] `+-[:ACTED_IN]->+`
+* [x] `+<-[:ACTED_IN]-+`
+
+
+[TIP,role=hint]
+.Hint
+====
+How is the `ACTED_IN` relationship defined between _Person_ nodes and _Movie_ nodes?
+
+The `->` and `<-` symbols specify the direction of the relationship.
+====
+
+[TIP,role=solution]
+.Solution
+====
+In the graph, the `:ACTED_IN` relationship always goes **from** a `:Person` node **to** a `:Movie` node.
+
+As the `:Movie` node is defined as the first node in the pattern, the answer is `<-[:ACTED_IN]-`.
+
+[source,cypher,role=nocopy noplay]
+----
+MATCH (m:Movie)<-[:ACTED_IN]-(p:Person)
+RETURN m.title, p.name
+----
+====

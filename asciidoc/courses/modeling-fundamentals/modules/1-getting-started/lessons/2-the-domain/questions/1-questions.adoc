@@ -1,0 +1,25 @@
+[.question]
+= 1. Understanding the domain
+
+What are some ways that stakeholders prepare for modeling?
+
+* [ ] Develop the set of API calls that will be used by the application.
+* [x] Describe the domain in detail.
+* [x] Identify the systems and users of the application.
+* [x] Enumerate the use cases of the application.
+
+[TIP,role=hint]
+.Hint
+====
+These 3 steps are key to modeling and must be agreed upon by the stakeholders.
+====
+
+[TIP,role=solution]
+.Solution
+====
+Stakeholders can prepare for graph data modeling by doing the following:
+
+**Describe the domain in detail.** +
+**Identify the systems and users of the application.** +
+**Enumerate the use cases of the application.**
+====

@@ -1,0 +1,28 @@
+[.question]
+= 2. Relationship Properties
+
+What properties could you add to the relationship to support this use case? (Select any that apply)
+
+* [ ] RATING
+* [x] rating
+* [ ] userId
+* [ ] tmdbId
+
+[TIP,role=hint]
+.Hint
+====
+You could say that the user has given the user a _rating_ of between 1 and 5 stars.
+You format properties as `lowerCamelCase`.
+
+Relationships do not need ID properties to identify the start and end nodes.
+====
+
+[TIP,role=solution]
+.Solution
+====
+You could add a *rating* property to the relationship to store the user's rating of the movie.
+You format properties as `lowerCamelCase`.
+
+The relationship does not need `userId` or `tmdbId` properties to identify the start and end nodes.
+====
+

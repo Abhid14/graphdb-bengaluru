@@ -1,0 +1,48 @@
+= Cypher Fundamentals
+:status: active
+:caption: Learn Cypher in 1 hour
+:usecase: movies
+:categories: beginners:2, start:2, software-development:2, data-analysis:2, llms:2, foundation:2, cypher:1, reporting:2
+:next: cypher-intermediate-queries, modeling-fundamentals
+:duration: 1 hour
+:video: https://www.youtube.com/embed/Se_Zwiew90Q
+:translations: jp-cypher-fundamentals,cn-cypher-fundamentals
+:key-points: Cypher patterns, Reading data from a graph, Writing data to a graph
+
+//https://youtu.be/Se_Zwiew90Q
+
+
+////
+Script: C:Cypher Fundamentals
+
+https://docs.google.com/document/d/1XUxDVgzFGR3XT1FC6ubWviitQdhJhf5NTZNMYzdCVVY/edit?usp=sharing
+
+////
+
+== Course Description
+
+This course teaches you the essentials of using Cypher, Neo4j's powerful query language, in as little time as possible.
+
+This course contains videos, content, questions to check your understanding of the content, and hands-on practices and challenges.
+
+=== Prerequisites
+
+You need not have any programming experience to take this course.
+
+=== Duration
+
+1 hour
+
+[.learn]
+=== What you will learn
+
+* Reading data from the graph
+* Writing data to the graph
+
+
+[.includes]
+== This course includes
+
+* [videos]#8 video lessons#
+* [challenges]#9 short hands-on challenges#
+* [quizes]#8 simple quizzes to support your learning#

@@ -1,0 +1,46 @@
+= Building Neo4j Applications with Python
+:categories: python, software-development:16
+:usecase: recommendations
+:status: active
+:caption: Build your own Neo4j-backed API
+:key-points: Driver life cycle, Installing and instantiation, Read and write transactions, Best practices
+:duration: 7 hours
+// tag::config[]
+:repository: neo4j-graphacademy/app-python
+:python-version: 3.10.6
+:cypher-repository: neo4j-graphacademy/neoflix-cypher
+// end::config[]
+
+== Course Description
+
+This course builds upon the link:https://graphacademy.neo4j.com/courses/drivers-python/[Using Neo4j with Python^] course, giving you the experience of building a real-world Neo4j application.
+
+You will take a pre-built link:https://flask.palletsprojects.com/en/2.0.x/[Flask^]-based API and replace the hardcoded responses with data from Neo4j.
+The API serves a pre-built Single Page Application (SPA), which you will be ablel to interact with as you work through the course.
+
+By the end of this course, you should feel confident in your ability to build a real-world Neo4j application using Python.
+
+
+=== Prerequisites
+
+We strongly recommend that you have completed the link:https://graphacademy.neo4j.com/courses/drivers-python/[Using Neo4j with Python^] course before taking this course.
+
+// include::{shared}/courses/gitpod/overview.adoc[leveloffset=+2]
+
+=== Duration
+
+{duration}
+
+=== What you will learn
+
+* The lifecycle of the Neo4j Driver and how it relates to your application
+* How to install and instantiate the Neo4j Python Driver to your Python project
+* How read and write transactions work with Neo4j
+* Best practices on how to use Neo4j within your Python project.
+
+[.includes]
+== This course includes
+
+// * [lessons]#7 lessons#
+* [challenges]#15  hands-on challenges#
+// * [quizes]#20 simple quizzes to support your learning#

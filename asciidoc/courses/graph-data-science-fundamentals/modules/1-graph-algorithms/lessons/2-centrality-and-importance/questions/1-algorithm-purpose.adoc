@@ -1,0 +1,27 @@
+[.question]
+= 1. Algorithm Purpose
+
+What do centrality algorithms generally measure?
+
+* [ ] The importance of distinct relationships in a graph
+* [ ] The central tendency of clusters in a graph
+* [x] The importance of distinct nodes in a graph
+* [ ] Which relationship paths are most central in the graph
+
+
+[TIP,role=hint]
+.Hint
+====
+Centrality algorithms generally measure the _importance_, _influence_, or _prominence_ of **nodes** within a network/graph. They provide metrics to assess the relative significance of nodes based on their position and connections within the network.
+
+
+
+
+
+====
+
+[TIP,role=solution]
+.Solution
+====
+Centrality algorithms general measure **the importance of distinct nodes in a graph**.
+====

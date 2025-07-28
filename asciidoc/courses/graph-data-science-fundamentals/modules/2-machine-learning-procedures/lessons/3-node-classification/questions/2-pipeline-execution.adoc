@@ -1,0 +1,21 @@
+[.question]
+= 2. Pipeline Execution
+
+Which command is used to execute a configured pipeline to train model candidates and register the best performing model in the catalog?
+
+* [ ] `execute`
+* [x] `train`
+* [ ] `run`
+* [ ] `register`
+
+[TIP,role=hint]
+.Hint
+====
+It is common to _train_ a machine learning model, and GDS is no different.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `train`.
+====

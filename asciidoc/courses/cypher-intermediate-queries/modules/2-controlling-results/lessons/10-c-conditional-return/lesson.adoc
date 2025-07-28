@@ -1,0 +1,27 @@
+= Conditionally Returning Data
+:type: challenge
+:order: 10
+:sandbox: true
+
+== Conditionally returning values for rows
+
+Here is a query that returns the movies that Charlie Chaplin has acted in and the runtime for the movie.
+
+[source,cypher]
+----
+include::sandbox.cypher[]
+----
+
+Modify this query to return "Short" for runTime if the movie's runtime is < 120 (minutes)
+and "Long" for runTime if the movie's runtime is >= 120.
+
+Then answer this  question:
+
+include::./questions/q1.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you modified a query to return conditional results.
+
+In the next challenge, you will answer another question about the query results.

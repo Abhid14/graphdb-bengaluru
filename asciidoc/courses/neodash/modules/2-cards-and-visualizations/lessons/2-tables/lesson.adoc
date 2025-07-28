@@ -1,0 +1,17 @@
+= Tables
+
+* What are tables
+* How to create a table
+
+
+[.quiz]
+== Check your understanding
+
+include::questions/1-q1.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this lesson, you learned about table cards in NeoDash.
+
+In the next lesson, you will create a table in your dashboard.

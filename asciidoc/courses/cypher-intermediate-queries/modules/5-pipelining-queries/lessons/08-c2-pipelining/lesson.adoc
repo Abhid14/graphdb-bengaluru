@@ -1,0 +1,24 @@
+= Highest Average Rating
+:type: challenge
+:order: 8
+:sandbox: true
+
+== Using WITH pass on intermediate results
+
+Using the query you just wrote:
+
+[source,cypher]
+----
+include::sandbox.cypher[]
+----
+
+Answer this question:
+
+include::./questions/q2.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you answered another question about the graph.
+
+In the next lesson, you will learn about unwinding lists during a query.

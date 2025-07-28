@@ -1,0 +1,21 @@
+[.question]
+= Importing large CSV files
+
+Why do you use `CALL { ...}` when you import data?
+
+* [ ] To automatically create the nodes using the headers in the CSV file.
+* [ ] To lock the entire graph exclusively during the import.
+* [ ] To temporarily raise the memory limit for the import.
+* [x] To reduce the amount of memory needed for the import.
+
+[TIP,role=hint]
+.Hint
+====
+This syntax is called a subquery in Cypher.
+====
+
+[TIP,role=solution]
+.Solution
+====
+You use `CALL {...}` in Neo4j Browser to **reduce memory needed for the import**.
+====

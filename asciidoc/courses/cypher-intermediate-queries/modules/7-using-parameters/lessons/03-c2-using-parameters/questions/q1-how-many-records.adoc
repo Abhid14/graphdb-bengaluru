@@ -1,0 +1,34 @@
+[.question.freetext]
+= How many records?
+
+How many records are returned for actors with a name starting with **Tom** and with **UK** in the list of countries on the Movie node.
+
+input::answer[]
+
+* [x] 39
+
+
+[TIP,role=hint]
+.Hint
+====
+You can set both parameters in one command using the `:params` command. 
+The syntax is:
+
+[source,cypher,role="norun nocopy"]
+----
+:params {key1: 'value1', key2: 'value2'}
+----
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `39`.
+
+You can set the parameters using the following command:
+
+[source,cypher,role=norun]
+----
+include::../solution.cypher[]
+----
+====

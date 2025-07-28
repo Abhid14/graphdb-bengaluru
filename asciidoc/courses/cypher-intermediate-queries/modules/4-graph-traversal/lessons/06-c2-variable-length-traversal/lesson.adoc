@@ -1,0 +1,17 @@
+= Actors 4 Hops Away
+:type: challenge
+:order: 6
+:sandbox: true
+
+== Variable length traversal
+
+
+include::./questions/q2.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you answered a question about a query with a varying length paths.
+
+In the next challenge, you will write another query.
+

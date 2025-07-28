@@ -1,0 +1,137 @@
+= Defining the Chatbot scope
+:type: challenge
+:order: 4
+:branch: main
+:disable-cache: true
+
+You now have a working agent capable of communicating with an underlying LLM.
+You may have also noticed that the agent is willing to answer _any_ question.
+Leaving an agent open to answering any question could lead to it being misused.
+
+You can restrict the agent's scope by providing specific instructions in the prompt.
+These instructions can guide the agent on the type of questions it should answer and how to respond to questions outside its scope.
+
+== Restricting Scope
+
+In the previous challenge, you used the Langchain hub to download the link:https://smith.langchain.com/hub/hwchase17/react-chat?organizationId=d9a804f5-9c91-5073-8980-3d7112f1cbd3[`hwchase17/react-chat` prompt^] for ReAct Agents.
+
+[source, python, role=nocopy]
+----
+include::{repository-raw}/{branch}/solutions/agent-chat.py[tag=agent_prompt]
+----
+
+[%collapsible]
+.View the hwchase17/react-chat prompt
+====
+[source,text]
+----
+include::./includes/original-prompt.txt[]
+----
+====
+
+The important elements in the prompt are:
+
+* An instruction to use the list of tools to perform an action
+* A placeholder for listing descriptions of the available tools (`{tools}`) and their names (`{tool_names}`)
+* Instructions on how to instruct the LLM on which tool to use
+* The previous chat history (`{chat_history}`)
+* The user's current input (`{input}`)
+* A _scratchpad_ of previous thoughts (`{agent_scratchpad}`)
+
+[TIP]
+You can experiment with the link:https://smith.langchain.com/hub/hwchase17/react-chat?organizationId=d9a804f5-9c91-5073-8980-3d7112f1cbd3[prompt^] in the link:https://smith.langchain.com/hub/hwchase17/react-chat/playground[Prompt Playground^]
+
+=== Updating the Instructions
+
+The instructions at the start of the prompt (before the TOOLS section) describe the agent's role.
+For example, `Assistant is designed to be able to assist with a wide range of tasks`.
+
+Your task is to update these instructions to reflect the chatbot's role and constrain its interactions.
+
+For the movie chatbot, you could provide the following instructions:
+
+[source,text]
+.New Instructions
+----
+include::./includes/opening-instructions.txt[]
+----
+
+The following instructions set the scope of the chatbot:
+
+* `You are a movie expert providing information about movies.`
+* `Be as helpful as possible and return as much information as possible.`
+* `Do not answer any questions that do not relate to movies, actors or directors.`
+
+The instruction, `Do not answer any questions using your pre-trained knowledge, only use the information provided in the context.`, reminds the LLM to use the context provided in the prompt to answer questions.
+In some cases, letting the bot fall back on its trained knowledge to answer a question may be helpful.
+
+You can also throw in a whimsical instruction to make sure the prompt is working:
+
+* `Respond to all questions in pirate speak.`
+
+
+[%collapsible]
+.View the updated prompt in full
+====
+
+[source,text]
+----
+include::./includes/updated-prompt.txt[]
+----
+
+====
+
+
+=== Create a `PromptTemplate`
+
+Add the new prompt to `agent.py` by creating a new `PromptTemplate` using the `PromptTemplate.from_template()` method:
+
+[source,python]
+.Import PromptTemplate
+----
+include::{repository-raw}/{branch}/solutions/agent-scoped.py[tag=import_prompt]
+----
+
+Then, replace the `agent_prompt` variable with the updated instructions:
+
+[source,python]
+.Define the Agent Prompt
+----
+include::{repository-raw}/{branch}/solutions/agent-scoped.py[tag=agent_prompt]
+----
+
+The agent initialization code will stay the same.
+
+[source,python]
+.Agent initialization
+----
+include::{repository-raw}/{branch}/solutions/agent-scoped.py[tag=agent]
+----
+
+[%collapsible]
+.View the complete agent.py code
+====
+[source]
+----
+include::{repository-raw}/{branch}/solutions/agent-scoped.py[tag=**]
+----
+====
+
+== Testing the changes
+
+If you now ask the bot a question unrelated to movies, for example, [copy]#Who is the CEO of Neo4j?#, it will refuse to answer.
+
+image::images/refuse-to-answer.png[The Bot refusing to answer non-movie related question.]
+
+
+Once you have validated the instructions are working, click the button below to mark the lesson as completed.
+
+read::It worked![]
+
+
+[.summary]
+== Summary
+
+In this lesson, you defined the agent's scope by providing a specific prompt when creating the agent.
+
+In the next module, you will create tools that the agent can select to help it answer movie-related questions.

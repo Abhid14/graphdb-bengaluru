@@ -1,0 +1,49 @@
+= Using Parameters
+:type: challenge
+:order: 3
+:sandbox: true
+
+In the previous challenge, you learned how to set a parameter.
+
+In this challenge, you will need to create to create multiple parameters to run this query:
+
+.Your Query
+[source,cypher]
+----
+MATCH (p:Person)-[:ACTED_IN]->(m:Movie)
+WHERE p.name STARTS WITH $name
+AND $country IN m.countries
+RETURN p.name AS actor,
+m.title AS title
+----
+
+If you run this query without setting any parameters, you will receive an error:
+
+----
+Expected parameter(s): name, country
+----
+
+To complete this challenge, complete the following steps:
+
+. Set the [copy]#name# parameter to [copy]#Tom#.
+. Set the [copy]#country# parameter to [copy]#UK#.
+. Execute the Query
++ 
+[source,cypher]
+----
+MATCH (p:Person)-[:ACTED_IN]->(m:Movie)
+WHERE p.name STARTS WITH $name
+AND $country IN m.countries
+RETURN p.name AS actor,
+m.title AS title
+----
+
+include::./questions/q1-how-many-records.adoc[leveloffset=+2]
+
+
+[.summary]
+== Summary
+
+In this challenge, you used multiple parameters to affect the results of a Cypher statement.
+
+In the next lesson, you will see some application code that uses parameters in Cypher.

@@ -1,0 +1,28 @@
+= Highest Rated Tom Hanks Movie
+:type: challenge
+:order: 7
+:sandbox: true
+
+== Using WITH to pass on intermediate results
+
+Complete this query to determine the highest average rating for a Tom Hanks movie:
+
+[source,cypher]
+----
+include::sandbox.cypher[]
+----
+
+You will need to use the correct variables in the `WITH` clause to pass on the intermediate results.
+
+The average rating should be calculated using the `rating` property from the `RATED` relationship.
+
+Then answer this question:
+
+include::./questions/q1.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you wrote a query to use a `WITH` clause to aggregate data.
+
+In the next challenge, you will answer another question using this query.

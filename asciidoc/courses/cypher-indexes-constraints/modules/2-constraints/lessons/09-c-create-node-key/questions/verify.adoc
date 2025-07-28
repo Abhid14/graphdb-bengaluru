@@ -1,0 +1,54 @@
+:id: _challenge
+
+[.verify]
+= Validate Results
+
+Once you have created the Node key constraint, click the **Check Constraints** button and we will check the database for you.
+
+
+verify::Check Constraints[]
+
+[TIP,role=hint]
+.Hint
+====
+Constraint names, label names, and property key names are all case-sensitive.
+The node label you should specify is for Person nodes (case-sensitive).
+The property keys you should specify are for name and url (case-sensitive).
+
+If you mis-specify a label or property key, the constraint will not be created.
+
+You can type `SHOW CONSTRAINTS` after you have created each constraint.
+
+If you mess up, you can reload this Challenge page and you should be where you need to be at the beginning of this Challenge.
+
+====
+
+[TIP,role=solution]
+.Solution
+====
+Here is the code to create the Node key constraint:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+
+After having created the Node key constraint, this code should return an error:
+
+[source,cypher]
+----
+MATCH (p:Person)
+WHERE p.name = 'Austin Green'
+SET p.name = null
+----
+
+This code will also return an error. It finds the Person node by name and then updates it where the constraint is violated:
+
+[source,cypher]
+----
+MERGE (p:Person {name: 'Austin Green'})
+SET p.url = 'https://themoviedb.org/person/1634650'
+RETURN p
+----
+
+====

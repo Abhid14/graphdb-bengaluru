@@ -1,0 +1,40 @@
+[.question.freetext]
+= How many options do you have to get from Nashville to Phuket with the smallest amount of flights?
+
+In the previous challenge you found the first path from Nashville (BNA) to Phuket (HKT) with the shortest number of flights.
+
+Now you will examine if there are multiple routes from Nashville to Phuket with the same number of flights.
+
+Replace the `???` in the query on the right of the screen to:
+
+. Use the `allShortestPaths` function to find all the paths that have the shortest length.
+. Count the number of paths returned with the `count` function.
+
+Enter the **number** of routes in the box below:
+
+input::answer[]
+
+* [x] 206
+
+// Once you have entered the answer, click the **Check Answer** button below to continue.
+
+[TIP,role=hint]
+.Hint
+====
+You are looking for the total number of path objects between _BNA_ and _HKT_ returned by the `allShortestPaths()` function.
+
+You can find the result by counting the shortest paths between the two airports with the `count()` aggregation function.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is *206*
+
+You can use the following query to count the number of shortest routes from Nashville (BNA) to Phuket (HKT):
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

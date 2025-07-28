@@ -1,0 +1,32 @@
+= Creating a Node
+:order: 2
+:type: challenge
+:sandbox: true
+
+In this challenge, you will create a new node for an actor not in the database, [copy]#Daniel Kaluuya#.
+
+== Create a new Person node for Daniel Kaluuya
+
+Replace the `?????` with the correct Cypher to create a new [copy]#Person# node with the `name` property of [copy]#Daniel Kaluuya#.
+
+[source, cypher, role=noplay]
+----
+include::sandbox.cypher[]
+----
+
+You can validate the node has been created using MATCH and filtering for the `name` property of `Daniel Kaluuya`.
+
+[source, cypher]
+----
+MATCH (p:Person {name: 'Daniel Kaluuya'})
+RETURN p
+----
+
+include::./questions/verify.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you used Cypher to create a node.
+In the next lesson, you will learn how to create relationships between nodes.
+

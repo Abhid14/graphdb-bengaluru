@@ -1,0 +1,21 @@
+[.question]
+= 2. Name the Algorithm
+
+Which centrality algorithm is based solely on a count of relationships for each node
+
+* [x] degree centrality
+* [ ] pageRank
+* [ ] HITS
+* [ ] eigenvector centrality
+
+[TIP,role=hint]
+.Hint
+====
+The number of relationships into or out of a relationship can also be referred to as a _degree_ count.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The **degree centrality** algorithm is a measure of centrality that calculates the importance of a node in a network based on the number of direct connections it has. It quantifies the number of edges connected to a node, indicating its level of influence or prominence within the network.
+====

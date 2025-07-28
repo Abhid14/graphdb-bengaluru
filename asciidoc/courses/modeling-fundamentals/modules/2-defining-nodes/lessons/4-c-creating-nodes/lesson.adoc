@@ -1,0 +1,50 @@
+= Creating More Nodes
+:type: challenge
+:order: 4
+:sandbox: true
+:updated-at: 2022-05-02 T 13:00:00 Z
+
+We want to add a couple of _User_ nodes to the graph so we can test the changes to our model.
+
+Any _User_ node will have the following properties:
+
+* userId - an integer (eg. `123`)
+* name - a string (eg. `User's Name`)
+
+Replace the `???` in this `MERGE` query to create two _User_ nodes with the following properties:
+
+. `userId` = [copy]#534#, `name` = [copy]#Sandy Jones#, 
+. `userId` = [copy]#105#, `name` = [copy]#Clinton Spencer#, 
+
+[source,cypher]
+----
+include::sandbox.cypher[]
+----
+
+[IMPORTANT]
+.Case sensitivity
+The property names and values are case-sensitive. 
+Make sure you use the correct case when entering the property names and values.
+
+Run the query to create 2 `User` nodes.
+
+You can run the following query to check the nodes have been created:
+
+[source,cypher]
+----
+MATCH (u:User) 
+RETURN u.userId, u.name
+----
+
+include::./questions/verify.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you demonstrated that you can create some nodes to support your instance model.
+
+Your instance model should now look like this:
+
+image::images/after-challenge2-instance-model.png[Instance Model thus far,width=400,align=center]
+
+In the next module, you will learn how to add relationships to your model.

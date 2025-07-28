@@ -1,0 +1,39 @@
+[.question]
+= When was Kevin Bacon born?
+
+Complete the Cypher query to find the year that [copy]#Kevin Bacon# was born.
+This value is stored in the [copy]#born# property.
+
+Replace the `?????` with the correct Cypher to find the year `Kevin Bacon` was `born`.
+
+[source, cypher]
+----
+include::../sandbox.cypher[]
+----
+
+Select the correct year:
+
+* [ ] 1954
+* [x] 1958
+* [ ] 1962
+* [ ] 1966
+
+[TIP,role=hint]
+.Hint
+====
+You need to filter the `(:Person)` node with the name property of `Kevin Bacon`. The property you are looking for is the `born` property of the `(:Person)` node.
+====
+
+
+[TIP,role=solution]
+.Solution
+====
+To find the answer, run the following query:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+
+This query will return `1958`, the `born` property of the `(:Person)` node with the `name` property of `Kevin Bacon`.
+====

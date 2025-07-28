@@ -1,0 +1,38 @@
+[.question.freetext]
+= Top Genres
+
+Complete this query to find the number of movies in each genre that have a `imdbRating` greater than 9.
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+You will need to call the subquery and pass the Genre variable.
+
+What is the top Genre with the most movies that have an `imdbRating` greater than 9? (case-sensitive)
+
+input::answer[]
+
+* [x] Drama
+
+[TIP,role=hint]
+.Hint
+====
+You use `CALL` to call the subquery.
+
+The variable `g` is required by the subquery to find the Genre.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `Drama`.
+
+Run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

@@ -1,0 +1,40 @@
+[.question.freetext]
+= Eliminate Duplicate Names in Rows
+
+This query returns the names people who acted or directed the movie Toy Story and the people who acted in other movies with them.
+
+Execute this query. It will return 183 rows, some of which are duplicates.
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+Modify the query to eliminate duplicate rows.
+
+How many rows are now returned?
+
+input::answer[]
+
+* [x] 166
+
+[TIP,role=hint]
+.Hint
+====
+Using the clause `DISTINCT` in the `RETURN` clause will only return distinct values.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `166`.
+
+You can view the result with this query:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====
+
+

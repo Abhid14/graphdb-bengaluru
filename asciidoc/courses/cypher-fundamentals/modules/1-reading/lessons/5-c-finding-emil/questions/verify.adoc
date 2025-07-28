@@ -1,0 +1,37 @@
+[.question]
+= Which movie has Emil Eifrem acted in?
+
+Update this Cypher query to only find movies that [copy]#Emil Eifrem# has acted in.
+
+[source, cypher, role=noplay]
+----
+include::../sandbox.cypher[]
+----
+
+Select the title of the movie:
+
+* [ ] The Birdcage
+* [x] The Matrix
+* [ ] Cloud Atlas
+* [ ] Hoffa
+
+[TIP,role=hint]
+.Hint
+====
+You will need to filter the query by the `name` property of the `(:Person)` node. 
+
+You can either link:https://neo4j.com/docs/cypher-manual/current/clauses/where/#filter-on-patterns[filter the name of the _Person_ node within the `MATCH` clause^] or link:https://neo4j.com/docs/cypher-manual/current/clauses/where/#filter-on-node-property[add a `WHERE` clause to the query^].
+====
+
+[TIP,role=solution]
+.Solution
+====
+You can use the following query to find the title of the Movie that Emil is listed as acted in.
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+
+The answer is _The Matrix_.
+====

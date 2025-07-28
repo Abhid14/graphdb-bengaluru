@@ -1,0 +1,17 @@
+= maps
+
+* What are maps
+* How to create maps
+
+
+[.quiz]
+== Check your understanding
+
+include::questions/1-q1.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this lesson, you learned about maps in NeoDash.
+
+In the next lesson, you will create a map in your dashboard.

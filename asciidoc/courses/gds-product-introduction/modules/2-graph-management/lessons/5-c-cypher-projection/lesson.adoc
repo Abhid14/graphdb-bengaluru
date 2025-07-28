@@ -1,0 +1,14 @@
+= Challenge: Cypher Projection
+:type: challenge
+:order: 5
+:sandbox: true
+:updated-at: 2022-05-04T10:00:00Z
+
+Now for a challenge.
+
+include::./questions/verify.adoc[leveloffset=+2]
+
+[.summary]
+== Lesson Summary
+
+In this lesson we learned about Cypher projections. What they are, how and when to use them.

@@ -1,0 +1,24 @@
+[.question]
+= 2. Pipeline Configuration
+
+What are the 3 relationship sets created by the `configureSplit` step in the link prediction pipeline?
+
+* [ ] train, validation, and test
+* [ ] train, test, and hold-out
+* [x] train, test, and feature-input
+* [ ] validation, test, and hold-out
+
+
+[TIP,role=hint]
+.Hint
+====
+These are the key elements of a Neo4j property graph.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is **train, test, and feature-input**.
+
+You can link:https://neo4j.com/docs/graph-data-science/current/machine-learning/linkprediction-pipelines/config/#linkprediction-configure-splits[read more about configuring relationship splits in the GDS documentation^].
+====

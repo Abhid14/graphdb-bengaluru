@@ -1,0 +1,67 @@
+= Writing Data to Neo4j
+:type: challenge
+:order: 5
+:lab-file: src/challenges/write/challenge.ts
+:lab-solution: src/challenges/write/solution.ts
+:lab: {repository-blob}/main/{lab-file}
+:branch: main
+
+In this challenge you will use write data to Neo4j to add yourself as an actor in The Matrix.
+
+Open the `{lab-file}` file that contains the starter code. 
+
+== Steps
+
+. Create the Cypher statement that will create new a `Person` node and `ACTED_IN` relationship to _The Matrix_ `Movie` node:
++
+[source, typescript]
+----
+include::{repository-raw}/{branch}/{lab-solution}[tag=cypher]
+----
+
+. Create the `params` object and set your name:
++
+[source, typescript]
+----
+include::{repository-raw}/{branch}/{lab-solution}[tag=params]
+----
+
+. Execute the Cypher statement using the `session.executeWrite()` method:
++
+[source, typescript]
+----
+include::{repository-raw}/{branch}/{lab-solution}[tag=execute]
+----
+
+. Log the result to the console:
++
+[source, typescript]
+----
+include::{repository-raw}/{branch}/{lab-solution}[tag=log_result]
+----
+
+== Run the Challenge
+
+Run the file using `ts-node` to view the result:
+
+[source,sh,subs=attributes+]
+----
+ts-node {lab-file}
+----
+
+You can check the result in the Neo4j Browser by running the following query:
+
+[source, cypher]
+----
+MATCH (m:Movie {title: "Matrix, The"})<-[a:ACTED_IN]-(p:Person)
+RETURN m, a, p
+----
+
+include::questions/verify.adoc[leveloffset=+2]
+
+[.summary]
+== Lesson Summary
+
+In this challenge, you used your knowledge to create a driver instance and run a Cypher statement.
+
+Next, we will look at the Neo4j Type System and some of the considerations that you need to make when working with values coming from Neo4j in your TypeScript application.

@@ -1,0 +1,28 @@
+:id: _challenge
+
+[.verify]
+= Validate Results
+
+Once you have run the query, click the **Check Database** button and we will check the database for you.
+
+
+verify::[]
+
+[TIP,role=hint]
+.Hint
+====
+You will need to run the Cypher statement in  **Creating Language Nodes** to perform this refactoring.
+
+Then click **Try Again**.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The following Cypher will create the `Language` nodes and `IN_LANGUAGE` relationships to the `Movie` nodes.
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

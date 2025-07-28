@@ -1,0 +1,13 @@
+= Younger Actors
+:type: challenge
+:order: 6
+:sandbox: true
+
+include::./questions/q1.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you wrote a query use pattern comprehension.
+
+In the next module, you will learn about working with lists in Cypher.

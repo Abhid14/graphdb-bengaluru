@@ -1,0 +1,36 @@
+[.question.freetext]
+= Lowest rating
+
+This query returns the movie titles with the highest `imdbRating` values first:
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+Modify the query to return the movie titles with the lowest `imdbRating` values first.
+
+What is the lowest imdbRating value for a movie?
+
+input::answer[]
+
+* [x] 1.6
+
+[TIP,role=hint]
+.Hint
+====
+The results will need to be ordered in *ascending* order.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The correct answer is: `1.6`
+
+You can run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

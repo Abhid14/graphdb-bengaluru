@@ -1,0 +1,29 @@
+[.question.freetext]
+= What Tom Hanks movie had the highest average rating greater than 4?
+
+Enter the *title* of the movie. (Note, the answer is case-sensitive).
+
+input::answer[]
+
+* [x] Captain Phillips
+
+[TIP,role=hint]
+.Hint
+====
+The average rating should be calculated using the `rating` property from the `RATED` relationship, `r`.
+
+The average rating is per movie node, `m`.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `Captain Phillips`.
+
+Run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

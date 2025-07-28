@@ -1,0 +1,57 @@
+= Introduction to Vector Indexes and Unstructured Data
+:categories: llms:8, intermediate:6, processing:3, generative-ai:2
+:status: active
+:next: llm-knowledge-graph-constructions
+:duration: 2 hours
+:caption: Understand and search unstructured data using vector indexes
+:usecase: blank-sandbox
+:key-points: Importing unstructured data into graphs, Vector indexes, Embedding data, Chunking, Using Neo4j with LangChain
+:repository: neo4j-graphacademy/llm-vectors-unstructured
+
+== Course Description
+
+This course teaches you how to use Neo4j and vector indexes to understand unstructured data.
+
+You will explore unstructured datasets, create embeddings and vector indexes and use them to search and understand the data.
+
+You will learn how to process unstructured data, chunking strategies, and create relationships between the data.
+
+You will build a graph database of unstructured data, use link:https://python.org[Python^], https://https://www.langchain.com/[LangChain^], and link:https://openai.com[OpenAI^] to process the data, create embeddings, and import it into Neo4j.
+
+After completing this course, you will have the knowledge and skill to build a graph of your unstructured data and query it using vector indexes.
+
+=== Prerequisites
+
+Before taking this course, you should have:
+
+* A basic understanding of Graph Databases and Neo4j
+* Knowledge of Python and capable of reading simple programs
+
+We recommend taking the link:/courses/neo4j-fundamentals/[Neo4j Fundamentals^] and link:https://graphacademy.neo4j.com/courses/cypher-fundamentals/[Cypher Fundamentals^] courses.
+
+Although not essential, you may also benefit from taking the following courses to understand how to import data and interact with Neo4j using Python and LLMs: 
+
+* link:https://graphacademy.neo4j.com/courses/importing-cypher/[Importing CSV data into Neo4j^] 
+* link:https://graphacademy.neo4j.com/courses/genai-fundamentals[Neo4j and Generative Fundamentals^]
+* https://graphacademy.neo4j.com/courses/genai-integration-langchain[Using Neo4j with LangChain^]
+
+To complete the practical tasks within this course, you will need link:https://python/org[Python^] and link:https://platform.openai.com[OpenAI API key and billing account^].
+
+
+=== Duration
+
+{duration}
+
+
+=== What you will learn
+
+* Semantic search, unstructured data, and vector indexes
+* How to create embeddings using LLMs and LangChain
+* To build a graph database of unstructured data
+
+[.includes]
+== This course includes
+
+* [lessons]#12 lessons#
+* [challenges]#8 short hands-on challenges#
+* [quizes]#9 simple quizzes to support your learning#

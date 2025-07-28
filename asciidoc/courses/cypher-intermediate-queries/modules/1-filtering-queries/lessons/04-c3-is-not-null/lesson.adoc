@@ -1,0 +1,13 @@
+= Checking for values
+:type: challenge
+:order: 4
+:sandbox: true
+
+include::./questions/q3.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you wrote and executed a query to test if a property does not exist.
+
+In the next challenge, you will answer another question about the graph.

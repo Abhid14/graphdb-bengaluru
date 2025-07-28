@@ -1,0 +1,20 @@
+= Graph Thinking
+:order: 1
+:description: Learn about the elements that make up a property graph.
+
+// [.video]
+// video::fdzfC1o2VEc[youtube,width=560,height=315]
+
+Welcome to Neo4j Fundamentals. 
+This is your start to learning about Neo4j and graph databases. 
+
+== Module Overview
+
+In this module, you will learn:
+
+* What Neo4j and a graph database is. 
+* The elements of a Neo4j graph database.
+* The advantages to using a graph database.
+* How graphs solve real-world problems.
+
+link:./1-what-is-neo4j/[Ready? Let's go →, role=btn]

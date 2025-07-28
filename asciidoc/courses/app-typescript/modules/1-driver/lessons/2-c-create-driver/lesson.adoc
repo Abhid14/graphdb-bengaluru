@@ -1,0 +1,137 @@
+= Creating a Driver Instance
+:type: challenge
+:order: 2
+:lab-file: src/challenges/create-driver/challenge.ts
+:lab-solution: src/challenges/create-driver/solution.ts
+:lab: {repository-blob}/main/{lab-file}
+:branch: main
+
+In this challenge you will:
+
+. Connect to a Neo4j database
+. Open a new session
+. Run a Cypher statement to find the director of **Toy Story**.
+
+You must set up a development environment to run the code.
+
+include::../../../../../../shared/courses/codespace/get-started.adoc[]
+
+[%collapsible]
+.Develop on your local machine
+====
+You will need link:https://nodejs.org/en/download[NodeJS] installed and the ability to install packages using `npm`.
+
+Clone the link:{repository-link}[github.com/neo4j-graphacademy/app-typescript] repository:
+
+[source,bash]
+----
+git clone https://github.com/neo4j-graphacademy/app-typescript
+----
+
+Install the required packages using `npm`:
+
+[source,bash]
+----
+npm install
+npm i typescript ts-node
+----
+
+You do not need to create a Neo4j database as you will use the provided sandbox instance.
+====
+
+== Setup the environment
+
+Create a copy of the `.env.example` file and name it `.env`.
+Fill in the required values.
+
+[source]
+.Create a .env file
+----
+include::{repository-raw}/{branch}/.env.example[]
+----
+
+Update the Neo4j sandbox connection details:
+
+NEO4J_URI:: [copy]#bolt://{instance-ip}:{instance-boltPort}#
+NEO4J_USERNAME:: [copy]#{instance-username}#
+NEO4J_PASSWORD:: [copy]#{instance-password}#
+
+== Steps
+
+Open the `{lab-file}` file that contains the starter code. 
+
+[source, typescript]
+.{lab-file}
+----
+include::{repository-raw}/{branch}/{lab-file}[]
+----
+
+. Use the `neo4j` object to create a new instance of the Driver with the credentials provided:
+  * `NEO4J_URI` is the connection string
+  * `NEO4J_USERNAME` and `NEO4J_PASSWORD` should be used to create the authentication token.
+
++
+[source, typescript]
+----
+include::{repository-raw}/{branch}/{lab-solution}[tag=create_driver]
+----
+
+. Open a new session:
++
+[source, typescript]
+----
+include::{repository-raw}/{branch}/{lab-solution}[tag=new_session]
+----
+
+. Use the session to run the Cypher query to find the director of **Toy Story**:
++
+[source, typescript]
+----
+include::{repository-raw}/{branch}/{lab-solution}[tag=run_cypher]
+----
+
+. Log the result to the console:
++
+[source, typescript]
+----
+include::{repository-raw}/{branch}/{lab-solution}[tag=log_director]
+----
+
+. Finally, close the session:
+[source, typescript]
+----
+include::{repository-raw}/{branch}/{lab-solution}[tag=close_session]
+----
+
+[%collapsible]
+.View the complete code
+====
+[source,ts]
+----
+include::{repository-raw}/main/{lab-solution}[tags=**]
+----
+====
+
+
+== Run the Challenge
+
+Run the file using `ts-node` to view the result:
+
+[source,sh,subs=attributes+]
+----
+ts-node {lab-file}
+----
+
+Once you have the result, copy and paste it into the text box below and click **Check Answer**.
+
+
+== Your Answer
+
+include::questions/1-director.adoc[leveloffset=+2]
+
+[.summary]
+== Lesson Summary
+
+In this challenge, you used your knowledge to create a driver instance and run a Cypher statement.
+
+In the next lesson, you will learn about the different transaction functions and when to use them.

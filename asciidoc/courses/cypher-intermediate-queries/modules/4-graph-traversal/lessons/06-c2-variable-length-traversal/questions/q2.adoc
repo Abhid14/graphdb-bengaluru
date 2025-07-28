@@ -1,0 +1,36 @@
+[.question.freetext]
+= Actors 4 hops away from Robert Blake.
+
+Update this query to return the *unique* names of actors that are *4* hops away from Robert Blake using the *ACTED_IN* relationship.
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+How many actor names are returned in the result?
+
+input::answer[]
+
+* [x] 253
+
+[TIP,role=hint]
+.Hint
+====
+Use the `:ACTED_IN*4` specification for the relationship.
+
+You can use `DISTINCT` to filter out duplicate results.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `253`.
+
+Run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

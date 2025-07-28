@@ -1,0 +1,29 @@
+[.question.freetext]
+= UK movies?
+
+How many movies released in the UK are in the graph?
+
+input::answer[]
+
+* [x] 1386
+
+[TIP,role=hint]
+.Hint
+====
+You should unwind by `country`, rather than `language`.
+
+After you have collected the movies for each country as a list, return the size of the list for each country.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `1386`.
+
+Run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

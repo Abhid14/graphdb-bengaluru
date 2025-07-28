@@ -1,0 +1,20 @@
+[.question]
+= Spring Data Neo4j Building Blocks
+
+Does Spring Data Neo4j manage driver sessions and transactions for us?
+
+- [ ] No
+- [*] Yes
+
+
+[TIP,role=hint]
+.Hint
+====
+Because we use the Spring Data Neo4j library, we don't need to write the boilerplate code to open and close driver sessions and transactions.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The Spring Data Neo4j manages the driver sessions and transactions for us.
+====

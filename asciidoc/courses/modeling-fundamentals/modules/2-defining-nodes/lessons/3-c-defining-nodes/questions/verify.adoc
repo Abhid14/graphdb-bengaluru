@@ -1,0 +1,28 @@
+[.question]
+= Adding a new label to the model
+
+What **label** should be added to nodes to identify any **Users** who have rated a movie?
+
+* [ ] user
+* [x] User
+* [ ] Users
+* [ ] Person
+
+[TIP,role=hint]
+.Hint
+====
+Use a label that represents a _user_ in the database. 
+
+There are already labels for _Movie_ and _Person_. 
+Use a label that differentiates a rating website *user* who rated movies from a *person* who acted in or directed movies.
+
+You format labels as `CamelCase` with the label starting with a capital letter.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is **User**.
+
+`user` is in the wrong case. `Users` is plural. `Person` is already used for actors and directors.
+====

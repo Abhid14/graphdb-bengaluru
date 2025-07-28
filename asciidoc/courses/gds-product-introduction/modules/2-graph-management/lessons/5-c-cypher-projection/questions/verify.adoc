@@ -1,0 +1,72 @@
+[.verify]
+= Create a Cypher Projection
+
+Create a cypher projection representing all `User` nodes that have rated a `Movie` with a release `year` **greater than** 2014.
+
+The projection must use the name `movie-ratings-after-2014`
+
+Complete the following Cypher query by replacing the `??????` with the correct values.
+
+[source,cypher,role=noplay]
+----
+MATCH (??????:User)-[r:RATED]->(??????:Movie)
+WHERE ??????.year > ????
+WITH gds.graph.project(
+  '??????', 
+  ??????, 
+  ??????
+) AS g
+RETURN
+  g.graphName AS graph, g.nodeCount AS nodes, g.relationshipCount AS rels
+----
+
+Once you have created the projection, you can verify that it was created successfully by listing the graph projections in the database:
+
+[source, cypher,role=noplay]
+----
+CALL gds.graph.list() YIELD graphName
+----
+
+Click the **Check Database** button to verify that there is a projection named `movie-ratings-after-2014` and that the task is complete.
+
+verify::[]
+
+[TIP,role=hint]
+.Hint
+====
+The Cypher needed to create the projection is:
+
+[source,cypher,role=noplay]
+----
+MATCH (source:User)-[r:RATED]->(target:Movie)
+WHERE target.year > 2014
+----
+
+The `source` and `target` nodes should be passed to the `gds.graph.project` function:
+
+[source,cypher,role=noplay]
+----
+MATCH (source:User)-[r:RATED]->(target:Movie)
+WHERE target.year > 2014
+
+WITH gds.graph.project(
+  '??????', 
+  ??????, 
+  ??????
+) AS g
+RETURN
+  g.graphName AS graph, g.nodeCount AS nodes, g.relationshipCount AS rels
+----
+====
+
+
+[TIP,role=solution]
+.Solution
+====
+Here is the correct query to create the Cypher projection.
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

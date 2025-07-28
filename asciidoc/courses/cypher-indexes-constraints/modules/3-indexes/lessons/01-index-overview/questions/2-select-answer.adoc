@@ -1,0 +1,31 @@
+[.question]
+= 2. What type of index possible?
+
+
+Suppose you need to create an index  on the Movie.title property to speed up this query:
+
+[source,cypher]
+----
+MATCH (m:Movie)
+WHERE m.title CONTAINS "Life"
+RETURN m
+----
+
+What type of index is generally best for this type of query?
+
+* [x] TEXT index
+* [ ] LOOKUP index
+* [ ] RANGE index
+* [ ] Full-text index
+
+[TIP,role=hint]
+.Hint
+====
+This type of index is implemented for string property values.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The correct answer is **TEXT index**
+====

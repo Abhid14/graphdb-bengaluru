@@ -1,0 +1,34 @@
+[.question.freetext]
+= How Many Actors?
+
+Update the query you just wrote to return the number of actors in movies with the same title.
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+How many actors are in the movies with the title `Hamlet`?
+
+input::answer[]
+
+* [x] 24
+
+[TIP,role=hint]
+.Hint
+====
+You can use the `size()` function to get the size of a list.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `24`.
+
+Run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

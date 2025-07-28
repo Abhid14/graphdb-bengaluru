@@ -1,0 +1,41 @@
+:id: _challenge
+
+[.verify]
+= Validate Results
+
+Once you completed the steps of this Challenge, click the **Check Database** button and we will check the database for you.
+
+
+verify::[]
+
+[TIP,role=hint]
+.Hint
+====
+To transform the lists you set three properties, countries, languages, and genres.
+You set them with one SET clause and each property being set is separated by a comma.
+You use split/coalesce to set each property.
+====
+
+[TIP,role=solution]
+.Solution
+====
+Here is the code to transform the three properties to lists:
+
+[source,cypher]
+----
+include::{repository-raw}/{path}/solution.cypher[]
+----
+
+If your graph does not verify, you may need to:
+
+. Clear the graph with:
+
+[source,cypher]
+----
+include::{repository-raw}/main/shared/detach-delete-all-nodes.cypher[]
+----
+
+[start=2]
+. Re-import the data once again with the Data Importer
+. Transform the genres, countries, languages properties to lists
+====

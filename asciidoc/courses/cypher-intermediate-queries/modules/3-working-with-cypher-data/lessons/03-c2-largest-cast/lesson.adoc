@@ -1,0 +1,14 @@
+= Creating Lists
+:type: challenge
+:order: 3
+:sandbox: true
+
+include::./questions/q2-actors-by-title.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you wrote a query to return lists of actors and order the lists to determine the largest list.
+
+In the next challenge, you will answer another question using this same query.
+

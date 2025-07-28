@@ -1,0 +1,14 @@
+= Retrieve Movies and Reviewers
+:type: challenge
+:order: 14
+:sandbox: true
+
+include::./questions/q1.adoc[leveloffset=+2]
+
+
+[.summary]
+== Summary
+
+In this challenge, you executed a query to retrieve movies and reviewers that have values in the graph.
+
+In the next challenge, you will modify the query to expand what results are returned by optionally matching rows.

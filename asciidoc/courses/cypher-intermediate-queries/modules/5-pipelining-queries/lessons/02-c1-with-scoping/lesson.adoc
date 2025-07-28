@@ -1,0 +1,24 @@
+= Tom Hanks Movies
+:type: challenge
+:order: 2
+:sandbox: true
+
+== Using WITH to scope variables
+
+Update this query to use a `WITH` clause to create a variable for the actor's name.
+
+[source,cypher]
+----
+include::sandbox.cypher[]
+----
+
+Answer this question:
+
+include::./questions/q1.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you modified a query to use a `WITH` clause to limit and order nodes.
+
+In the next challenge, you will answer another question about this query.

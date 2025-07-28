@@ -1,0 +1,29 @@
+[.question.freetext]
+= How many movies did Tom Hanks star in?
+
+How many movies titles are returned?
+
+input::answer[]
+
+* [x] 38
+
+[TIP,role=hint]
+.Hint
+====
+You will need to use `WITH` to scope the variable for the actor's name.
+
+The keyword `AS` is used to create an alias for the variable.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `38`.
+
+Run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

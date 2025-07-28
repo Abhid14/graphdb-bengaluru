@@ -1,0 +1,38 @@
+[.question.freetext]
+= Calculate days between two dates
+
+Update this query to calculate the number of days between the `date1` and `date2` properties of the `Test` node.
+
+The difference between the two dates is the *duration in days*.
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+Enter the number of days:
+
+input::answer[]
+
+* [x] 165
+
+[TIP,role=hint]
+.Hint
+====
+You will need to use the `duration.inDays` function and return the number of `days` between the two dates.
+
+Make sure you have updated the `Test` node before running the query.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `165`.
+
+Run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

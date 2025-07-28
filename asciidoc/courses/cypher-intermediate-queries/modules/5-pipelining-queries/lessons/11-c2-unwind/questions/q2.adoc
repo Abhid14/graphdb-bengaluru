@@ -1,0 +1,27 @@
+[.question.freetext]
+= Movies produced in Switzerland?
+
+How many movies produced in Switzerland are in the graph?
+
+input::answer[]
+
+* [x] 50
+
+[TIP,role=hint]
+.Hint
+====
+You can filter on the `trimmedCountry` variable that contains the country names after trimming the whitespace. 
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `50`.
+
+Run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

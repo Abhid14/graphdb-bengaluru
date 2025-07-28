@@ -1,0 +1,44 @@
+[.question.freetext]
+= Actors by movie title
+
+Return a list actors who have appeared in movies with the same title.
+
+Update this query to:
+
+. Return the actors as a list.
+. Order the results by the size of the actors list.
+
+[source,cypher]
+----
+include::../sandbox.cypher[]
+----
+
+[NOTE]
+There are multiple movies with the same title so the query aggregates by the movie title and not the movieID.
+
+What movie title had the largest number of actors? (case-sensitive)
+
+input::answer[]
+
+* [x] Hamlet
+
+[TIP,role=hint]
+.Hint
+====
+Use `collect()` to create the list of actors.
+
+You can use the `size()` function to get the size of a list.
+====
+
+[TIP,role=solution]
+.Solution
+====
+The answer is `Hamlet`.
+
+Run the following query to see the result:
+
+[source,cypher]
+----
+include::../solution.cypher[]
+----
+====

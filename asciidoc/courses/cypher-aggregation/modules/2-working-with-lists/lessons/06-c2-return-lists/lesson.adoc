@@ -1,0 +1,13 @@
+= Reviewed Same Movies
+:type: challenge
+:order: 6
+:sandbox: true
+
+include::./questions/q1.adoc[leveloffset=+2]
+
+[.summary]
+== Summary
+
+In this challenge, you wrote a query that returns the names of Users that reviewed the same movies.
+
+In the next lesson, you will learn about Cypher functions to change the types of list elements.

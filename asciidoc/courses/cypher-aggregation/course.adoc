@@ -1,0 +1,44 @@
+= Cypher Aggregations
+:categories: cypher:3, software-development:6, data-analysis:5, reporting:6, intermediate:2
+:usecase: recommendations
+:caption: Continue your learning journey with Cypher queries
+:status: active
+:duration: 4 hours
+:video: https://www.youtube.com/embed/kxHIfE_BwEc
+:key-points: Aggregation, Lists, Cypher functions, Profiling, Explain
+
+//video: https://youtu.be/kxHIfE_BwEc
+
+== Course description
+
+In this course you will learn what aggregation is in Cypher and how it behaves at runtime.
+You will also review and learn more about the Cypher syntax and functions for working with lists.
+You will see and run example code that uses the most widely-used aggregation  and list functions in Cypher.
+
+== What you will learn
+
+In this course, you will learn how to:
+
+* Profile and explain how aggregation works at runtime
+** Using `collect()`
+** Using `count()`
+** Using pattern comprehension
+* Work with lists
+** Functions that return a single value
+** Functions that return lists
+** Element type transformations
+** List selection predicates
+** List comprehension
+* Use aggregating functions
+** sum()
+** avg()/stddev()
+** min()/max()
+** percentages and percentiles
+
+
+[.includes]
+== This course includes
+
+* [videos]#12 video lessons#
+* [challenges]#14 short hands-on challenges#
+* [quizes]#14 simple quizzes to support your learning#

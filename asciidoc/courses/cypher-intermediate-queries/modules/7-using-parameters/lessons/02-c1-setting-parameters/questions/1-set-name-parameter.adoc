@@ -1,0 +1,38 @@
+[.question]
+= Set the $name Parameter
+
+What command would you run in Neo4j Browser to set the `$name` parameter to *Tom*? (Select all that apply)
+
+* [x] :param name: 'Tom'
+* [ ] :param name = 'Tom'
+* [x] :params {name: 'Tom'}
+* [ ] :params {name = 'Tom'}
+
+[TIP,role=hint]
+.Hint
+====
+The `:param` command allows you to set a parameter which is persisted as long as the browser window is open.
+The syntax is:
+
+[source,cypher,role="norun nocopy"]
+----
+:param key: "value"
+----
+
+The `:params` command allows you to set multiple parameters at once. 
+The syntax is:
+
+[source,cypher,role="norun nocopy"]
+----
+:params {key: 'value'}
+----
+====
+
+[TIP,role=solution]
+.Solution
+====
+The correct answers are:
+
+* :param name: 'Tom'
+* :params {name: 'Tom'}
+====

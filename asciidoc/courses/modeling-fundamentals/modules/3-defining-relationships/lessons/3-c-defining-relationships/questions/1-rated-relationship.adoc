@@ -1,0 +1,28 @@
+[.question]
+= 1. Adding a new relationship to the model
+
+What Relationship Type could you use when creating a relationship between _User_ nodes and _Movie_ to represent a rating?
+
+* [ ] rated
+* [x] RATED
+* [ ] SCORE
+* [ ] RATING
+
+[TIP,role=hint]
+.Hint
+====
+A common way of talking about movie ratings is that a user has *rated* a movie.
+Once the data is created, rating the movie is in the past, so using *past tense* makes sense.
+
+You format relationship types as `UPPER_SNAKE_CASE`.
+====
+
+
+[TIP,role=solution]
+.Solution
+====
+The answer here is **RATED**.
+
+`rated` is in the wrong case and `SCORE` and `RATING` are nouns rather than verbs.
+====
+
