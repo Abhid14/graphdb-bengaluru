@@ -1,4 +1,4 @@
-= GraphAcademy Course Content
+= GraphDB Bengaluru Workshop Content
 
 This repository holds the course curriculum for link:https://graphacademy.neo4j.com[GraphAcademy^].
 
